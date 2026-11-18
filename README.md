@@ -21,9 +21,11 @@ Spectrum: 312^1, 24^182, (−8)^585.
     conjugacy class, all regular. So the graph is a Cayley graph only of G.
   - Three-orbit graph: |Aut| = 1280, with three orbits of size 256.
   - Random members: typically |Aut| = 256 (the translations).
-- **Template.** The same proof applies to n fibres F_q^2 on K_n. Five further parameter sets with v ≤ 1300 come out of
-  it, all listed as open: (363,192,106,96), (507,176,70,56), (1083,560,298,280), (196,120,74,72) and
-  (676,459,314,306). Each would follow from a suitable "seed" (`code/families.py`, Section 7 of the paper).
+- **Template, and why prime fields fail.** The same proof applies formally to n fibres F_q^2 on K_n. The parameter
+  arithmetic then allows five further open sets with v ≤ 1300: (363,192,106,96), (507,176,70,56),
+  (1083,560,298,280), (196,120,74,72) and (676,459,314,306). All have prime q, and Proposition 8.1 of the paper shows
+  that over F_p^2 the cross sets must be cosets of lines or their complements, so the template cannot produce any of
+  them (`code/families.py`, `code/prime_obstruction.py`, `code/relaxed_template.py`; Section 8 of the paper).
 
 ## Construction
 

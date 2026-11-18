@@ -21,16 +21,17 @@ from the mathematical description only and shares no code with the original scri
 
 | claim | check | log |
 |---|---|---|
-| Lemma 3.4 (Gauss periods), Lemma 3.5 (parity), all 48 norm seeds | `srg768.parity_lemma`, `gauss_period_lemma`, `is_seed` by enumeration | `norm_lemmas.log` |
+| Lemma 3.5 (Gauss periods), Lemma 3.6 (parity), all 48 norm seeds | `srg768.parity_lemma`, `gauss_period_lemma`, `is_seed` by enumeration | `norm_lemmas.log` |
 | C5-invariant seeds: 4080 in total; 12 on each of the 340 subline four-sets; none on the other 2040 four-sets | `seed_search.py` (all 2380 four-sets × 4096 sign patterns) | `seed_search.log`, `seeds_base.json` |
 | The 4080 C5-invariant seeds are exactly the GL(2,16)-images of one norm seed | `seed_search.py gl` | `seed_gl_orbit.log` |
+| The original seed is z_{0,0,1} ∘ M0^{-1} with M0 = ((t²+1, t²), (0, 1)) (Section 7) | `original_seed_check.py` | `original_seed_check.log` |
 
 ## Cayley graph and partial difference set
 
 | claim | check | log |
 |---|---|---|
 | The spectral construction equals Cay(G, D); D is a (768,312,136,120) PDS; G is nonabelian | `cayley768.py` (all 312² quotients) | `cayley768.log` |
-| G = SmallGroup(768,1085323) = C2^4 × (C2^4 ⋊ C3); Aut = C2^8 ⋊ C15, of order 3840, solvable; vertex stabiliser C5; a single class of subgroups of order 768, all regular | GAP on `cayley768.g` | `cayley768_gap.log` |
+| Original Cayley graph: G = SmallGroup(768,1085323) = C2^4 × (C2^4 ⋊ C3); Aut = C2^8 ⋊ C15, of order 3840, solvable; vertex stabiliser C5; a single class of subgroups of order 768, all regular. For the norm-seed Cayley graph (Proposition 6.2) the paper proves this from \|Aut\| = 3840 (bliss, `invariants768.log`) | GAP on `cayley768.g` | `cayley768_gap.log` |
 | `graphs/pds768_norm_cayley.txt` is a PDS in the group given by its own header; IdGroup is the same | `check_pds.py`, GAP | `check_pds.log` |
 
 ## Invariants and isomorphism classes
@@ -46,6 +47,8 @@ from the mathematical description only and shares no code with the original scri
 |---|---|---|
 | Parameter sets of the n-fibre template (Table 2 of the paper), with their status in the local copy of Brouwer's table | `families.py 256` | `families.log` |
 | The q = 3 instance gives srg(27,16,10,8) | `template_q3.py` | `template_q3.log` |
+| Proposition 8.1 (prime fields): the only flat line-sum sequences are a full line and its complement (exhaustive, p = 3, 5, 7) | `prime_obstruction.py` | `prime_obstruction.log` |
+| Relaxed template, Remark 8.2 (arbitrary two-eigenvalue Cayley graphs in fibres F_p^2; the code takes the fibre eigenvalue off the supports to be the negative eigenvalue, the other choice gives the complementary parameter sets): every open row with v ≤ 1300 that it reaches has fibres of order p² with p an odd prime and \|H1_B\| = p, so Proposition 8.1 excludes it | `relaxed_template.py current_table.csv` (local copy of Brouwer's table as of 18 Nov 2026, with our own constructions marked as known; not in the repository) | `relaxed_template.log` |
 
 ## Bugs found and fixed while checking
 

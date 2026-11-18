@@ -38,7 +38,7 @@
 \begin{document}
 
 \begin{abstract}
-We construct strongly regular graphs with parameters $(768,312,136,120)$. This parameter set and its complement $(768,455,262,280)$ are listed as open in Brouwer's table. The vertex set is three copies of $V=\F_{16}^2$. Inside each copy, adjacency is given by eight lines of the Desarguesian spread. Between two copies it is given by a set $B\subseteq V$ of size $96$ whose Fourier transform is $\pm16$ on four punctured spread lines and vanishes elsewhere. Such sets come from a signed function defined using the norm $\F_{16}\to\F_4$, and the proof that the Fourier transform takes only these values reduces to a parity property of quadratics over $\F_4$. The construction has free parameters: $1000$ random members fall into $999$ isomorphism classes. One member is a Cayley graph on the nonabelian group $C_2^4\times(C_2^4\rtimes C_3)$. This gives a $(768,312,136,120)$ partial difference set, a parameter set that no abelian group admits. The same template predicts further parameter sets, five of them open, for which suitable signed functions would give graphs.
+We construct strongly regular graphs with parameters $(768,312,136,120)$. No graph with these parameters or with the complementary parameters $(768,455,262,280)$ was known. The vertex set is three copies of $V=\F_{16}^2$. Inside each copy, adjacency is given by eight lines of the Desarguesian spread. Between two copies it is given by a set $B\subseteq V$ of size $96$ whose Fourier transform is $\pm16$ on four punctured spread lines, $96$ at $0$, and $0$ elsewhere. Such sets come from a signed function defined using the norm $\F_{16}\to\F_4$, and the proof that the Fourier transform takes only these values reduces to a parity property of quadratics over $\F_4$. The construction has free parameters, and $1000$ random members give at least $999$ pairwise non-isomorphic graphs. One member is a Cayley graph on the nonabelian group $C_2^4\times(C_2^4\rtimes C_3)$. This gives a $(768,312,136,120)$ partial difference set, a parameter set that no abelian group admits. The construction generalizes formally to $n$ fibres $\F_q^2$, and the parameter arithmetic then allows several other open parameter sets; we show that none of them can be realized this way, because over a prime field the sets joining two fibres are forced to be cosets of lines or their complements.
 \end{abstract}
 
 \maketitle
@@ -46,30 +46,30 @@ We construct strongly regular graphs with parameters $(768,312,136,120)$. This p
 %=====================================================================
 \section{Introduction}
 
-A strongly regular graph $\srg(v,k,\lambda,\mu)$ is a $k$-regular graph on $v$ vertices, neither complete nor edgeless, in which any two adjacent vertices have exactly $\lambda$ common neighbours and any two distinct non-adjacent vertices have exactly $\mu$. Brouwer maintains a table of the feasible parameter sets with $v\le1300$ and the status of each~\cite{BrouwerTable}; see also~\cite{BvM2022}. As of November~2026 the table lists all feasible parameter sets on $768$ vertices as open or ruled out, with no construction known for any of them. Among the open ones is $(768,312,136,120)$, with eigenvalues $24^{182}$ and $(-8)^{585}$, and its complement $(768,455,262,280)$.
+A strongly regular graph $\srg(v,k,\lambda,\mu)$ is a $k$-regular graph on $v$ vertices, neither complete nor edgeless, in which any two adjacent vertices have exactly $\lambda$ common neighbours and any two distinct non-adjacent vertices have exactly $\mu$. See~\cite{BvM2022} for background. No strongly regular graph with parameters $(768,312,136,120)$, or with the complementary parameters $(768,455,262,280)$, was known, and no construction was known for any primitive parameter set on $768$ vertices~\cite{BrouwerTable}. The eigenvalues are $312$, $24^{182}$ and $(-8)^{585}$.
 
 \begin{theorem}\label{thm:main}
 There exist strongly regular graphs with parameters $(768,312,136,120)$, and hence also with parameters $(768,455,262,280)$. More precisely:
 \begin{enumerate}
-\item Construction~\ref{con:graph} gives a $\srg(768,312,136,120)$ for every choice of three seeds (Definition~\ref{def:seed}) with pairwise disjoint supports, and such seeds exist (Proposition~\ref{prop:normseed}).
-\item One member is a Cayley graph on $G=C_2^4\times(C_2^4\rtimes C_3)$, which is $\mathrm{SmallGroup}(768,1085323)$. So $G$ contains a regular $(768,312,136,120)$ partial difference set.
-\item The construction gives many non-isomorphic graphs: $1000$ random members fall into $999$ isomorphism classes.
+\item Construction~\ref{con:graph} gives a $\srg(768,312,136,120)$ for every choice of three seeds (Definition~\ref{def:seed}) with pairwise disjoint sets of support lines, and such seeds exist (Proposition~\ref{prop:normseed}).
+\item One member is a Cayley graph on the group $G=C_2^4\times(C_2^4\rtimes C_3)$, whose GAP identifier is $(768,\,1085323)$. Hence $G$ contains a regular $(768,312,136,120)$ partial difference set.
+\item The construction gives many non-isomorphic graphs: $1000$ random members include at least $999$ pairwise non-isomorphic graphs.
 \end{enumerate}
 \end{theorem}
 
-A $(768,312,136,120)$ partial difference set cannot live in an abelian group. By a theorem of Ma~\cite{Ma1994} (see~\cite[Prop.~1.1]{DeWinterWang}), an abelian group with a cyclic Sylow $p$-subgroup and order different from $p$ contains no nontrivial partial difference set. Every group of order $768=2^8\cdot3$ has a cyclic Sylow $3$-subgroup. So Theorem~\ref{thm:main}(2) gives a partial difference set that is ``genuinely nonabelian'' in the sense of~\cite{DPSS2023,PDSS2024}. Recent systematic studies of partial difference sets in nonabelian groups exclude order $768$ for computational reasons~\cite{NelsonSwartz}; see also~\cite{SwartzTauscheck}. The closest precedent we know is Brady's $\srg(147,66,25,33)$~\cite{Brady2025}, found as a partial difference set in nonabelian groups of order $147=3\cdot7^2$ by local search. The complement of that graph has the parameters of the case $q=7$ of the template in Section~\ref{sec:template}.
+The partial difference set of Theorem~\ref{thm:main}(2) is nontrivial: neither $D\cup\{1\}$ nor $G\setminus D$ is a subgroup, since $313$ and $456$ do not divide $768$. It cannot live in an abelian group. By results of Ma~\cite{Ma1994,Ma1997} (see~\cite[Prop.~1.1]{DeWinterWang}), an abelian group with a cyclic Sylow $p$-subgroup and order different from $p$ contains no nontrivial partial difference set, and every group of order $768=2^8\cdot3$ has a cyclic Sylow $3$-subgroup. So the partial difference set is ``genuinely nonabelian'' in the sense of~\cite{DPSS2023,PDSS2024}. Nelson and Swartz~\cite{NelsonSwartz} test their restrictions for nonabelian partial difference sets against the feasible parameter sets but omit $v\in\{512,768,1024\}$ because of the number of groups. The closest precedent we know is Brady's $\srg(147,66,25,33)$~\cite{Brady2025}, found by local search as a partial difference set in nonabelian groups of order $147=3\cdot7^2$; by the same argument of Ma, no abelian group of order $147$ admits one. The complement of that graph has the parameters of the case $q=7$ of the template in Section~\ref{sec:template}, although Proposition~\ref{prop:prime} shows that it does not arise from the template.
 
-The construction is in Section~\ref{sec:construction} and the seeds in Section~\ref{sec:seeds}. The proof is a $3\times3$ block computation in the character basis (Section~\ref{sec:proof}). Section~\ref{sec:cayley} describes the Cayley member. Section~\ref{sec:template} explains why $768$ is a special case of a template that also predicts several other open parameter sets.
+The construction is in Section~\ref{sec:construction} and the seeds in Section~\ref{sec:seeds}. The proof is a $3\times3$ block computation in the character basis (Section~\ref{sec:proof}). Section~\ref{sec:cayley} describes the Cayley member. Section~\ref{sec:template} places the construction in a template with $n$ fibres $\F_q^2$ and shows that for prime $q$ the template only gives graphs in which the sets joining two fibres are cosets of lines or their complements.
 
 %=====================================================================
 \section{Notation}\label{sec:notation}
 
-Let $F=\F_{16}$, and let $K=\F_4=\{0,1,\omega,\omega^2\}\subset F$. Write $\Tr\colon F\to\F_2$ for the absolute trace, $N(a)=a^5=a\cdot a^4$ for the norm $F\to K$, and $T(a)=a+a^4$ for the trace $F\to K$. Put $V=F^2$, a vector space of dimension $8$ over $\F_2$, and pair $V$ with itself by $\langle (x,y),(a,b)\rangle=\Tr(ax+by)$. For $\beta\in V$ let $\chi_\beta(v)=(-1)^{\langle v,\beta\rangle}$. For $f\colon V\to\mathbb{Z}$ let
+Let $F=\F_{16}=\F_2[t]/(t^4+t+1)$, and let $K=\F_4=\{0,1,\omega,\omega^2\}\subset F$ with $\omega=t^2+t$. Write $\Tr\colon F\to\F_2$ for the absolute trace, $N(a)=a^5=a\cdot a^4$ for the norm $F\to K$, and $T(a)=a+a^4$ for the trace $F\to K$. Put $V=F^2$, a vector space of dimension $8$ over $\F_2$, and pair $V$ with itself by $\langle (x,y),(a,b)\rangle=\Tr(ax+by)$. For $\beta\in V$ let $\chi_\beta(v)=(-1)^{\langle v,\beta\rangle}$. We write vectors of $V$ as rows, but matrices act on them as on column vectors. For a statement $P$, $[P]$ is $1$ if $P$ holds and $0$ otherwise, and $\delta_0=[\,\cdot=0\,]$ is the indicator function of $\{0\}$. For $f\colon V\to\mathbb{Z}$ let
 \[
 (Hf)(v)=\sum_{\beta\in V} f(\beta)\chi_\beta(v),\qquad\text{so that } H^2=256\,I.
 \]
 
-The \emph{spread lines} are the $17$ one-dimensional $F$-subspaces $L_m=\{(a,ma):a\in F\}$ for $m\in F$ and $L_\infty=\{(0,a)\}$. We write $L^*=L\setminus\{0\}$, and we identify a set of spread lines with a set of slopes in $\PG(1,16)=F\cup\{\infty\}$. The annihilator $L^\perp=\{v:\langle v,\beta\rangle=0\ \forall\beta\in L\}$ of a spread line is again a spread line, and $(L^\perp)^\perp=L$. Since $\chi_\beta$ restricted to $L^\perp$ is trivial if $\beta\in L$ and a nontrivial character otherwise,
+The \emph{spread lines} are the $17$ one-dimensional $F$-subspaces $L_m=\{(a,ma):a\in F\}$ for $m\in F$ and $L_\infty=\{(0,a)\}$. We write $L^*=L\setminus\{0\}$, and we identify a set of spread lines with a set of slopes in $\PG(1,16)=F\cup\{\infty\}$. The annihilator $L^\perp=\{v:\langle v,\beta\rangle=0\ \forall\beta\in L\}$ of a spread line is again a spread line: $L_m^\perp=L_{m^{-1}}$, with $0$ and $\infty$ interchanged. Also $(L^\perp)^\perp=L$. Since $\chi_\beta$ restricted to $L^\perp$ is trivial if $\beta\in L$ and a nontrivial character otherwise,
 \begin{equation}\label{eq:line}
 \sum_{v\in (L^\perp)^*}\chi_\beta(v)=\begin{cases}15,&\beta\in L,\\-1,&\beta\notin L.\end{cases}
 \end{equation}
@@ -95,7 +95,7 @@ H1_B=16z+96\,\delta_0 .
 \end{lemma}
 
 \begin{proof}
-Since $Hz$ takes the values $10$ and $-6$, $b$ is $0/1$-valued. Since $H^2=256I$ and $H\delta_0=1$, we get $Hb=(256z+6\cdot256\,\delta_0)/16=16z+96\delta_0$. Finally $|B|=(Hb)(0)=96$, because $z(0)=0$.
+Since $Hz$ takes the values $10$ and $-6$, $b$ is $0/1$-valued. Since $H^2=256I$ and $H1=256\,\delta_0$, we get $Hb=(256z+6\cdot256\,\delta_0)/16=16z+96\delta_0$. Finally $|B|=(Hb)(0)=96$, because $z(0)=0$.
 \end{proof}
 
 \begin{lemma}\label{lem:GL}
@@ -114,7 +114,7 @@ z\bigl(a,(h+\mu)a\bigr)=\varepsilon_\mu\,(-1)^{[N(a)=\nu]}\qquad(\mu\in K,\ a\in
 and $z=0$ elsewhere. Then $z$ is a seed with support lines $\{L_m: m\in h+K\}$.
 \end{proposition}
 
-The shear $(a,b)\mapsto(a,b+ha)$ maps $z_{0,\mu_0,\nu}$ to $z_{h,\mu_0+h,\nu}$. By Lemma~\ref{lem:GL} it therefore suffices to treat $h=0$. We need two lemmas.
+The shear $(a,b)\mapsto(a,b+ha)$ maps $z_{0,\mu_0,\nu}$ to $z_{h,\mu_0,\nu}$. By Lemma~\ref{lem:GL} it therefore suffices to treat $h=0$. We need two lemmas.
 
 \begin{lemma}[Gauss periods]\label{lem:gauss}
 For $c\in K^*$,
@@ -139,11 +139,11 @@ For the second statement, $\hat f_\nu(0)=15-2\cdot5=5$. For $u\ne0$ we have $\ha
 \end{proof}
 
 \begin{lemma}[Parity]\label{lem:parity}
-For every $(x,y)\in V$ and $n\in K^*$, the number of $\mu\in K$ with $N(x+\mu y)\in\{0,n\}$ is even.
+For every $(x,y)\in V$ and $\eta\in K^*$, the number of $\mu\in K$ with $N(x+\mu y)\in\{0,\eta\}$ is even.
 \end{lemma}
 
 \begin{proof}
-If $y=0$ the value $N(x)$ does not depend on $\mu$, so the count is $0$ or $4$. Let $y\ne0$ and $w=x/y$. Then $N(x+\mu y)=N(y)N(w+\mu)$, and we count $\mu$ with $N(w+\mu)\in N(y)^{-1}\{0,n\}$, a set of size $2$.
+If $y=0$ the value $N(x)$ does not depend on $\mu$, so the count is $0$ or $4$. Let $y\ne0$ and $w=x/y$. Then $N(x+\mu y)=N(y)N(w+\mu)$, and we count $\mu$ with $N(w+\mu)\in N(y)^{-1}\{0,\eta\}$, a set of size $2$.
 \begin{itemize}
 \item If $w\in K$, then $N(w+\mu)=(w+\mu)^2$ is a bijection of $K$, so the count is $2$.
 \item If $w\notin K$, then $N(w+\mu)=(w+\mu)(w^4+\mu)=N(w)+\mu(\mu+T(w))$ with $T(w)\ne0$. The map $\mu\mapsto\mu^2+T(w)\mu$ is $\F_2$-linear on $K$ with kernel $\{0,T(w)\}$. So every value of $N(w+\mu)$ is taken by exactly $0$ or $2$ elements $\mu$, and the count is even.\qedhere
@@ -155,15 +155,15 @@ Take $h=0$. For $v=(x,y)$ we have $\chi_{(a,\mu a)}(v)=(-1)^{\Tr(a(x+\mu y))}$, 
 \[
 (Hz)(v)=-6+8\Bigl(\sum_{\mu}\delta_\mu-2\delta_{\mu_0}\Bigr).
 \]
-By Lemma~\ref{lem:parity}, $c=\sum_\mu\delta_\mu\in\{0,2,4\}$. If $c=0$ then $\delta_{\mu_0}=0$, and if $c=4$ then $\delta_{\mu_0}=1$. In all cases $c-2\delta_{\mu_0}\in\{0,2\}$, so $(Hz)(v)\in\{-6,10\}$.
+By Lemma~\ref{lem:parity}, $e=\sum_\mu\delta_\mu\in\{0,2,4\}$. If $e=0$ then $\delta_{\mu_0}=0$, and if $e=4$ then $\delta_{\mu_0}=1$. In all cases $e-2\delta_{\mu_0}\in\{0,2\}$, so $(Hz)(v)\in\{-6,10\}$.
 \end{proof}
 
 \begin{remark}[All $C_5$-invariant seeds]\label{rem:allseeds}
-The scalars $C_5=\ker N\le F^*$ act on $V$. A computer search over all $\binom{17}{4}$ sets of four spread lines and all $2^{12}$ sign patterns constant on $C_5$-orbits found the following.
+The scalars $C_5=\ker N\le F^*$ act on $V$, and each punctured spread line splits into three $C_5$-orbits. An exhaustive search over all $\binom{17}{4}$ sets of four spread lines and all $2^{12}$ sign patterns constant on $C_5$-orbits found the following.
 \begin{itemize}
 \item There are exactly $4080$ $C_5$-invariant seeds.
-\item They form a single $\GL(2,16)$-orbit, the orbit of the norm seeds.
-\item Their support lines are exactly the $340$ four-subsets of the sublines $\PG(1,4)\subset\PG(1,16)$, which are the four-sets with cross-ratio $\omega$. Each such four-set carries $12$ seeds.
+\item They form a single $\GL(2,16)$-orbit, the orbit of the norm seeds; the stabilizer of a seed has order $15$.
+\item Their sets of support lines are exactly the $340$ four-sets contained in one of the $68$ sublines $\PG(1,4)\subset\PG(1,16)$, equivalently the four-sets with cross-ratios in $\{\omega,\omega^2\}$. Each such four-set carries $12$ seeds.
 \end{itemize}
 Seeds that are not $C_5$-invariant also exist: if $z$ is a seed then so is $z\chi_c$ for every $c\in V$, which corresponds to translating $B$ by $c$.
 \end{remark}
@@ -172,7 +172,7 @@ Seeds that are not $C_5$-invariant also exist: if $z$ is a seed then so is $z\ch
 \section{The construction}\label{sec:construction}
 
 \begin{construction}\label{con:graph}
-Let $z_0,z_1,z_2$ be seeds whose sets of support lines $S_0,S_1,S_2$ are pairwise disjoint, and let $B_0,B_1,B_2$ be the sets of Lemma~\ref{lem:B}. Indices are taken modulo $3$. Let $T_i=S_{i-1}\cup S_i$, a set of eight spread lines, and let $C_i=\bigcup_{L\in T_i}(L^\perp)^*$, a set of size $120$. The graph $\Gamma=\Gamma(z_0,z_1,z_2)$ has vertex set $\mathbb{Z}/3\times V$ and the following edges:
+An \emph{admissible triple} is a triple of seeds $z_0,z_1,z_2$ whose sets of support lines $S_0,S_1,S_2$ are pairwise disjoint. Given one, let $B_0,B_1,B_2$ be the sets of Lemma~\ref{lem:B}. Indices are taken modulo $3$. Let $T_i=S_{i-1}\cup S_i$, a set of eight spread lines, and let $C_i=\bigcup_{L\in T_i}(L^\perp)^*$, a set of size $120$. The graph $\Gamma=\Gamma(z_0,z_1,z_2)$ has vertex set $\mathbb{Z}/3\times V$ and the following edges:
 \begin{itemize}
 \item $(i,x)\sim(i,y)$ if $x+y\in C_i$;
 \item $(i,x)\sim(i+1,y)$ if $x+y\in B_i$.
@@ -181,7 +181,7 @@ Let $z_0,z_1,z_2$ be seeds whose sets of support lines $S_0,S_1,S_2$ are pairwis
 
 Every vertex has $120+96+96=312$ neighbours. The translations $(i,x)\mapsto(i,x+c)$ are automorphisms, so $|\Aut\Gamma|\ge256$.
 
-Proposition~\ref{prop:normseed} gives many admissible triples. For example, take three of the four additive cosets of $K$ in $F$, say $h_0+K$, $h_1+K$ and $h_2+K$, and set $z_i=z_{h_i,\mu_i,\nu_i}$ for any $\mu_i\in h_i+K$ and $\nu_i\in K^*$. More generally, one can take any three pairwise disjoint four-subsets of sublines $\PG(1,4)$ with any of the $12$ seeds on each, multiplied by characters (Remark~\ref{rem:allseeds}).
+Proposition~\ref{prop:normseed} gives many admissible triples. For example, take three of the four additive cosets of $K$ in $F$, say $h_0+K$, $h_1+K$ and $h_2+K$, and set $z_i=z_{h_i,\mu_i,\nu_i}$ for any $\mu_i\in K$ and $\nu_i\in K^*$. More generally, one can take any three pairwise disjoint four-sets, each contained in a subline $\PG(1,4)$, with any of the $12$ seeds on each, multiplied by characters (Remark~\ref{rem:allseeds}).
 
 %=====================================================================
 \section{Proof of Theorem~\ref{thm:main}(1)}\label{sec:proof}
@@ -205,7 +205,7 @@ For $\beta\in V$ let $W_\beta$ be the span of the three vectors $e_i\otimes\chi_
 \item If $\beta$ lies on a line of $S_i$, then $\beta\in\bigcup T_i$ and $\beta\in\bigcup T_{i+1}$, but $\beta\notin\bigcup T_{i+2}$. So $D_\beta$ is the direct sum of $\begin{pmatrix}8&\pm16\\\pm16&8\end{pmatrix}$, with eigenvalues $24$ and $-8$, and the $1\times1$ block $(-8)$.
 \end{itemize}
 
-There are $3\cdot4\cdot15=180$ vectors $\beta$ of the second kind and $75$ of the first. So $A$ has the eigenvalue $312$ once, $24$ with multiplicity $2+180=182$, and $-8$ with multiplicity $2\cdot180+3\cdot75=585$. A connected regular graph with exactly three distinct eigenvalues is strongly regular. Here $\mu=k+rs=312-192=120$ and $\lambda=\mu+r+s=136$.
+There are $3\cdot4\cdot15=180$ vectors $\beta$ of the second kind and $75$ of the first. So $A$ has the eigenvalue $312$ once, $24$ with multiplicity $2+180=182$, and $-8$ with multiplicity $2\cdot180+3\cdot75=585$. Since $312$ is a simple eigenvalue, $\Gamma$ is connected, and a connected regular graph with exactly three distinct eigenvalues is strongly regular. With eigenvalues $24$ and $-8$ we get $\mu=312+24\cdot(-8)=120$ and $\lambda=\mu+24-8=136$.
 \end{proof}
 
 %=====================================================================
@@ -218,51 +218,54 @@ K\ \longmapsto\ c+K\ \longmapsto\ c\omega^2+K\ \longmapsto\ K .
 Let $z_0=z_{0,\mu_0,\nu}$ and $z_i=z_0\circ M^{-i}$. These are seeds by Lemma~\ref{lem:GL}, with pairwise disjoint support lines.
 
 \begin{proposition}\label{prop:cayley}
-Let $R=(M^\top)^{-1}$. For this triple, the map $\sigma\colon(i,x)\mapsto(i+1,Rx)$ is an automorphism of $\Gamma$. Together with the translations it generates a group $G\cong V\rtimes\langle R\rangle$ of order $768$ that acts regularly on the vertices. Hence $\Gamma\cong\Cay(G,D)$, where $D$ is the neighbourhood of $(0,0)$, and $D$ is a regular $(768,312,136,120)$ partial difference set in $G$.
+Let $R=(M^\top)^{-1}$. For this triple, the map $\tau\colon(i,x)\mapsto(i+1,Rx)$ is an automorphism of $\Gamma$. Together with the translations it generates a group $G\cong V\rtimes\langle R\rangle$ of order $768$ that acts regularly on the vertices. Hence $\Gamma\cong\Cay(G,D)$, where $D$ is the neighbourhood of $(0,0)$, and $D$ is a regular $(768,312,136,120)$ partial difference set in $G$.
 \end{proposition}
 
 \begin{proof}
-By Lemma~\ref{lem:GL}, $Hz_{i+1}=(Hz_i)\circ R^{-1}$, so $B_{i+1}=RB_i$. Similarly $S_{i+1}=MS_i$, hence $T_{i+1}=MT_i$. Since $\langle Rv,M\beta\rangle=\langle v,\beta\rangle$, this gives $(ML)^\perp=R(L^\perp)$ and so $C_{i+1}=RC_i$. These relations hold for all $i$ modulo $3$ because $M^3=I$. Therefore $\sigma$ preserves both kinds of edges. The group generated by $\sigma$ and the translations is $\{(i,x)\mapsto(i+j,R^jx+c)\}$, of order $3\cdot256$, and it acts regularly.
+By Lemma~\ref{lem:GL}, $Hz_{i+1}=(Hz_i)\circ R^{-1}$, so $B_{i+1}=RB_i$. Similarly $S_{i+1}=MS_i$, hence $T_{i+1}=MT_i$. Since $\langle Rv,M\beta\rangle=\langle v,\beta\rangle$, this gives $(ML)^\perp=R(L^\perp)$ and so $C_{i+1}=RC_i$. These relations hold for all $i$ modulo $3$ because $M^3=I$. Therefore $\tau$ preserves both kinds of edges. The group generated by $\tau$ and the translations is $\{(i,x)\mapsto(i+j,R^jx+u):j\in\mathbb Z/3,\ u\in V\}$, of order $3\cdot256$, and it acts regularly.
 \end{proof}
 
-The linear map $R$ has eigenvalues $1$ and $\omega^{-1}$ on $F^2$, so $V=V_1\oplus V'$ with two $R$-invariant $F$-lines, $R$ trivial on $V_1$ and fixed-point-free on $V'$. Hence $G\cong C_2^4\times(C_2^4\rtimes C_3)$. GAP identifies $G$ as $\mathrm{SmallGroup}(768,1085323)$.
+The linear map $R$ has eigenvalues $1$ and $\omega^{-1}$ on $F^2$, so $V=V_1\oplus V'$ with two $R$-invariant $F$-lines, $R$ trivial on $V_1$ and acting on $V'\cong F$ as multiplication by $\omega^{-1}$. Hence $G\cong C_2^4\times(C_2^4\rtimes C_3)$, where $C_3$ acts on $C_2^4=(F,+)$ by multiplication by $\omega$. GAP identifies $G$ as $\mathrm{SmallGroup}(768,1085323)$.
 
-For the member with $c=t$, $\mu_0=0$ and $\nu=1$, where $F=\F_2[t]/(t^4+t+1)$, the following hold.
-\begin{itemize}
-\item $\Aut\Gamma\cong C_2^8\rtimes C_{15}$, of order $3840$. The vertex stabiliser is $C_5$, the scalars of norm~$1$.
-\item $\Aut\Gamma$ is solvable, and its subgroups of order $768$ form a single conjugacy class. They are exactly the Hall $\{2,3\}$-subgroups.
-\end{itemize}
-So $\Gamma$ is a Cayley graph of $G$ and of no other group. We found a second Cayley graph on the same group, in different coordinates (Section~\ref{sec:properties}). It is not isomorphic to the first, although its automorphism group and four-clique counts are the same.
+\begin{proposition}\label{prop:aut}
+Let $\Gamma$ be the graph of Proposition~\ref{prop:cayley} for $c=t$, $\mu_0=0$ and $\nu=1$. Then $\Aut\Gamma=\{(i,x)\mapsto(i+j,\lambda R^jx+u): j\in\mathbb Z/3,\ \lambda\in C_5,\ u\in V\}\cong C_2^8\rtimes C_{15}$, a solvable group of order $3840$ whose vertex stabilizer is $C_5$. Every subgroup of $\Aut\Gamma$ of order $768$ is conjugate to $G$. Hence $\Gamma$ is a Cayley graph of $G$ and of no other group.
+\end{proposition}
+
+\begin{proof}
+The scalars $\lambda\in C_5$ commute with $R$, and the seeds $z_i$ are $C_5$-invariant because $N(\lambda a)=N(a)$. So $\lambda$ fixes every $B_i$ and every $C_i$, and the maps in the statement are automorphisms. They form a group of order $3\cdot5\cdot256=3840$. The program bliss gives $|\Aut\Gamma|=3840$, so this is all of $\Aut\Gamma$. The group is an extension of $V$ by $C_3\times C_5\cong C_{15}$, hence solvable, and a subgroup of order $768=|\Aut\Gamma|/5$ is a Hall $\{2,3\}$-subgroup. By Hall's theorem all such subgroups are conjugate to $G$. A group acting regularly on the vertices has order $768$, so it is conjugate to $G$.
+\end{proof}
+
+The same argument applies to the Cayley graph built from the original seed (Section~\ref{sec:properties}), for which $\Aut\Gamma$ was also computed directly with GAP. The two Cayley graphs are not isomorphic, although their automorphism groups are isomorphic and their four-clique counts agree.
 
 %=====================================================================
 \section{Properties and non-isomorphic members}\label{sec:properties}
 
 \begin{table}[ht]
 \centering
-\caption{Explicit members. Each fibre is an $\Aut$-orbit or lies in one. Four-cliques are counted through a vertex of each fibre.}\label{tab:witnesses}
+\caption{Explicit members. Each fibre is an $\Aut$-orbit or lies in one. Four-cliques are counted through a vertex of each fibre. The norm-seed graphs use $\mu_0=0$ and $\nu=1$ throughout.}\label{tab:witnesses}
 \begin{tabular}{lccc}
 \toprule
 graph & $|\Aut\Gamma|$ & vertex orbits & four-cliques per vertex\\
 \midrule
-Cayley, original coordinates & $3840$ & $1$ & $445040$\\
-Cayley, norm coordinates ($c=t$) & $3840$ & $1$ & $445040$\\
-shear, original coordinates & $1280$ & $3\times256$ & $444230,\ 443250,\ 443760$\\
-shear, norm coordinates ($h=0,t,t^3$) & $1280$ & $3\times256$ & $445040$ (each)\\
-random members & $256$ (typical) & $3\times256$ & varies\\
+Cayley, original seed & $3840$ & $1$ & $445040$\\
+Cayley, norm seed ($c=t$) & $3840$ & $1$ & $445040$\\
+shear, original seed & $1280$ & $3\times256$ & $444230,\ 443250,\ 443760$\\
+shear, norm seed ($h=0,t,t^3$) & $1280$ & $3\times256$ & $445040$ (each)\\
+random members & mostly $256$ & mostly $3\times256$ & varies\\
 \bottomrule
 \end{tabular}
 \end{table}
 
-The witnesses found first use other coordinates. With $F=\F_2[t]/(t^4+t+1)$, so that $\omega=t^2+t$, both start from a $C_5$-invariant seed on the slopes $\{0,1,t,t^3+t\}$ (listed in the repository).
+The graphs found first use a different seed. Let $M_0=\begin{pmatrix}t^2+1&t^2\\0&1\end{pmatrix}$. The \emph{original seed} is $z_{0,0,1}\circ M_0^{-1}$, a seed by Lemma~\ref{lem:GL}; its support lines have slopes $\{0,1,t,t^3+t\}$.
 \begin{itemize}
-\item The original Cayley graph transports this seed by $M=\begin{pmatrix}1&0\\ t^2+1&\omega\end{pmatrix}$. This is the matrix of Section~\ref{sec:cayley} with $c=t^2+1\notin K$.
-\item The original shear graph uses the shears $(a,b)\mapsto(a,b+ha)$ with $h\in\{0,\ t^2,\ t^3+t^2+1\}$.
+\item The original Cayley graph transports the original seed by $M=\begin{pmatrix}1&0\\ t^2+1&\omega\end{pmatrix}$, as in Section~\ref{sec:cayley} with $c=t^2+1\notin K$.
+\item The original shear graph applies the shears $(a,b)\mapsto(a,b+ha)$ with $h\in\{0,\ t^2,\ t^3+t^2+1\}$ to the original seed.
 \end{itemize}
-Every $C_5$-invariant seed is a $\GL(2,16)$-image of a norm seed (Remark~\ref{rem:allseeds}), so both are instances of Construction~\ref{con:graph}.
+In both cases the three seeds have pairwise disjoint sets of support lines, so these are instances of Construction~\ref{con:graph}.
 
-In the three-orbit shear graph in original coordinates, the three fibres have different four-clique counts. So no automorphism moves a fibre to another fibre, and the graph is not isomorphic to either Cayley graph.
+In the original shear graph the three fibres have different four-clique counts. So no automorphism moves a fibre to another fibre, and the graph is not isomorphic to either Cayley graph.
 
-\emph{Many graphs.} We drew $1000$ random admissible triples: three pairwise disjoint four-subsets of sublines, a random seed on each, and a random character twist of $B_0$. Every resulting graph was verified on all pairs. Their bliss canonical forms give $999$ isomorphism classes; one pair of draws produced isomorphic graphs.
+\emph{Many graphs.} We drew $1000$ random admissible triples: three pairwise disjoint four-subsets of sublines, a random seed on each, and a random character twist of $B_0$. Every resulting graph was verified on all pairs. Their bliss canonical forms give $999$ isomorphism classes; one pair of draws produced isomorphic graphs. So the construction gives at least $999$ pairwise non-isomorphic graphs.
 \begin{itemize}
 \item $996$ graphs have $|\Aut\Gamma|=256$, the translations alone, and their orbits are the three fibres.
 \item $2$ have $|\Aut\Gamma|=512$, with two fibres forming one orbit.
@@ -271,32 +274,32 @@ In the three-orbit shear graph in original coordinates, the three fibres have di
 The four explicit graphs of Table~\ref{tab:witnesses} are pairwise non-isomorphic.
 
 %=====================================================================
-\section{A template and further parameter sets}\label{sec:template}
+\section{A template, and why prime fields fail}\label{sec:template}
 
-The proof of Theorem~\ref{thm:srg} uses only the following ingredients, and these make sense for any prime power $q$ and any number $n$ of fibres.
+The proof of Theorem~\ref{thm:srg} uses only the following ingredients, which make sense for any prime power $q$ and any number $n$ of fibres. Pair $\F_q^2$ with itself by $\langle x,\beta\rangle=\Tr_{\F_q/\F_p}(x_1\beta_1+x_2\beta_2)$ and let $\chi_\beta(x)=\zeta_p^{\langle x,\beta\rangle}$, which is complex for odd $q$; $H1_B(\beta)=\sum_{w\in B}\chi_\beta(w)$ as before. For fibres $i<j$ joined by $B_e$, let $(i,x)\sim(j,y)$ if $y-x\in B_e$, and inside fibre $i$ let $(i,x)\sim(i,y)$ if $y-x\in C_i$.
 \begin{itemize}
 \item Take $n$ copies of $\F_q^2$, joined along all pairs (fibre graph $K_n$).
-\item Each pair $e$ carries a set $B_e$ with $H1_{B_e}=q\,z_e+\kappa\,\delta_0$. Here $z_e$ is supported on $r$ punctured spread lines and has $|z_e|=1$ there; for odd $q$ the characters are complex, so $z_e$ is complex-valued.
-\item The supports of pairs at a common fibre are disjoint.
+\item Each pair $e$ carries a set $B_e$ with $H1_{B_e}=q\,z_e+\kappa\,\delta_0$, where $z_e$ is supported on $r$ punctured spread lines and has absolute value $1$ there. For odd $q$ the cross block is no longer symmetric, and its transpose acts on characters by the complex conjugate.
+\item The supports of pairs at a common fibre are disjoint; in particular $(n-1)r\le q+1$.
 \item Each fibre uses the annihilators of the $(n-1)r$ support lines of its pairs.
 \end{itemize}
-The $2\times2$ blocks then have eigenvalues $2q-(n-1)r$ and $-(n-1)r$, and so do the characters outside the supports. Two further conditions are needed: Parseval for $B_e$, namely $\kappa^2-q^2\kappa+r(q-1)q^2=0$, and the condition that the constant characters give one of these two eigenvalues, namely $(n-1)r(q-1)-\kappa\in\{2q-(n-1)r,\,-(n-1)r\}$.
+The $2\times2$ blocks then have eigenvalues $2q-(n-1)r$ and $-(n-1)r$, and so do the characters outside the supports. Two further conditions are needed: the Parseval identity for $B_e$, namely $\kappa^2-q^2\kappa+r(q-1)q^2=0$, and the condition that the constant characters give one of these two eigenvalues, namely $(n-1)r(q-1)-\kappa\in\{2q-(n-1)r,\,-(n-1)r\}$.
 
-For $n=3$ the solutions form two series:
+For $n=3$ the solutions are one series and two sporadic cases:
 \begin{itemize}
 \item $q=4r-1$ with $\kappa=2rq$;
 \item $(q,r)\in\{(13,3),(16,4)\}$ with $\kappa=2q(r-1)$.
 \end{itemize}
-Table~\ref{tab:template} lists the cases with $v\le1300$ and $n\ge3$ that are not settled by $r=1$. The table status is from~\cite{BrouwerTable}, November 2026. For $q=3$ the template is realised, with $B$ the complement of a line, and gives the Schläfli graph. For $q=7$ the parameters are those of the complement of Brady's graph~\cite{Brady2025}. We have not checked whether that graph has this structure.
+Table~\ref{tab:template} lists the solutions with $r\ge2$, $n\ge3$ and $v\le1300$. For $r=1$ the sets $B_e$ are cosets of lines or their complements; for instance $q=3$, $n=3$ gives the Schl\"afli graph $\srg(27,16,10,8)$.
 
 \begin{table}[ht]
 \centering
-\caption{Parameter sets predicted by the template ($v\le1300$, beyond $r=1$). ``Open'' means listed as open in~\cite{BrouwerTable}.}\label{tab:template}
+\caption{Solutions of the parameter conditions with $q$ a prime power, $r\ge2$, $n\ge3$ and $v\le1300$.}\label{tab:template}
 \begin{tabular}{cccccl}
 \toprule
 $n$ & $q$ & $r$ & $\kappa$ & parameters & status\\
 \midrule
-$3$ & $7$ & $2$ & $28$ & $(147,80,46,40)$ & known~\cite{Brady2025}\\
+$3$ & $7$ & $2$ & $28$ & $(147,80,46,40)$ & known (complement of~\cite{Brady2025})\\
 $3$ & $11$ & $3$ & $66$ & $(363,192,106,96)$ & open\\
 $3$ & $13$ & $3$ & $52$ & $(507,176,70,56)$ & open\\
 $3$ & $16$ & $4$ & $96$ & $(768,312,136,120)$ & this paper\\
@@ -308,8 +311,28 @@ $4$ & $16$ & $4$ & $160$ & $(1024,660,428,420)$ & known\\
 \end{tabular}
 \end{table}
 
+Every open entry has prime $q$, and the next proposition shows that the template cannot produce any of them.
+
+\begin{proposition}\label{prop:prime}
+Let $p$ be prime, $\zeta=e^{2\pi i/p}$, and $\chi_\beta(x)=\zeta^{\langle x,\beta\rangle}$ for $x,\beta\in\F_p^2$ and a nondegenerate bilinear form $\langle\cdot,\cdot\rangle$. Let $B\subseteq\F_p^2$, and suppose that $|H1_B(\beta)|\in\{0,p\}$ for every $\beta\ne0$. Then $B$ is empty, the whole space, a coset of a line, or the complement of a coset of a line.
+\end{proposition}
+
+\begin{proof}
+Suppose $w=H1_B(\beta)\ne0$ for some $\beta\ne0$. For $t\in\F_p^*$ let $\sigma_t$ be the automorphism $\zeta\mapsto\zeta^t$ of $\mathbb{Q}(\zeta)$. Then $H1_B(t\beta)=\sigma_t(w)$, so every conjugate of $w$ is nonzero and therefore has absolute value $p$. Hence $w\bar w=p^2$ in every embedding. The only prime ideal of $\mathbb{Z}[\zeta]$ above $p$ is $P=(1-\zeta)$, with $P=\bar P$ and $(p)=P^{p-1}$. So $(w)=P^a$, and comparing norms gives $a=p-1$, that is, $(w)=(p)$. Thus $w/p$ is a unit all of whose conjugates have absolute value $1$, and by Kronecker's theorem $w=\pm p\,\zeta^j$ for some $j$.
+
+Let $n_s=|\{x\in B:\langle x,\beta\rangle=s\}|$ for $s\in\F_p$, so that $0\le n_s\le p$ and $w=\sum_s n_s\zeta^s$. The only linear relation among $1,\zeta,\dots,\zeta^{p-1}$ over $\mathbb{Q}$ is that their sum vanishes, so $w=\pm p\zeta^j$ forces $n_s=c\pm p\,[s=j]$ for a constant $c$. With the plus sign, $n_j\le p$ gives $c=0$, so $B$ is the coset $\{\langle x,\beta\rangle=j\}$. With the minus sign, $n_j\ge0$ gives $c=p$, so $B$ is the complement of that coset. If instead $H1_B$ vanishes at every $\beta\ne0$, then $1_B$ is constant.
+\end{proof}
+
+So for prime $q$ the template forces $\kappa\in\{q,q^2-q\}$, and then the Parseval identity gives $r=1$. In particular the complement of Brady's graph does not arise from the template.
+
+\begin{remark}\label{rem:relaxed}
+Proposition~\ref{prop:prime} concerns only the sets joining two fibres. Suppose more generally that the fibres are copies of $\F_p^2$ carrying arbitrary Cayley graphs with two nonprincipal eigenvalues, that each cross set $B_e$ has $|H1_{B_e}|$ constant on its support and zero at the other nonzero frequencies, and that the supports at a fibre are disjoint. Solving the trace, Parseval and eigenvalue conditions for all parameter sets with $v\le1300$ and no known graph gives sixteen cases when the fibre eigenvalue off the supports is the negative eigenvalue of the graph, and their sixteen complements otherwise. All have $p$ odd and $|H1_{B_e}|=p$ and $\kappa\notin\{p,p^2-p\}$, so Proposition~\ref{prop:prime} excludes them as well.
+\end{remark}
+
+For $q=p^e$ with $e\ge2$ the Galois orbit $\{t\beta:t\in\F_p^*\}$ is a proper subset of the punctured $\F_q$-line through $\beta$, so the argument of Proposition~\ref{prop:prime} does not apply; for $p=2$ the characters are real and there is no Galois constraint at all. Beyond $v\le1300$, the cases with $r\ge2$ and $q$ not prime begin with $q=27$, $n=3$, giving $(2187,1120,586,560)$, and $q=25$, $n=4$, giving $(2500,1632,1070,1056)$.
+
 \begin{question}
-Do seeds exist for $(q,r)=(11,3)$, $(13,3)$ and $(19,5)$ with $n=3$, or for $(7,2)$ and $(13,3)$ with $n=4$? For odd $q$ the natural candidates are built from multiplicative characters on the support lines, as the norm seeds are here.
+Do seeds exist for $q=25$ and $q=27$? What are the analogues of the norm seeds there?
 \end{question}
 
 \begin{question}
@@ -323,24 +346,25 @@ Is there a $(768,312,136,120)$ partial difference set in a group of order $768$ 
 %=====================================================================
 \section{Computations}\label{sec:computations}
 
-The code and graphs are in the accompanying repository \url{https://github.com/dylan-plummer/srg768}. All checks below were run with code written independently of the original search code.
+The code and graphs are available at
+\begin{center}\url{https://github.com/dylan-plummer/srg768}.\end{center}
+The checks below use code written independently of the original search code.
 \begin{itemize}
 \item \textbf{Graphs checked on all pairs} (verifying $A^2=kI+\lambda A+\mu(J-I-A)$):
   \begin{itemize}
-  \item the two original witnesses and the complement of the shear witness;
-  \item the norm-coordinate Cayley and shear graphs;
-  \item $20$ random members, and every member generated in Section~\ref{sec:properties}.
+  \item the two original-seed graphs and the complement of the original shear graph;
+  \item the norm-seed Cayley and shear graphs;
+  \item every random member generated in Section~\ref{sec:properties}.
   \end{itemize}
 \item \textbf{Spectrum:} the $3\times3$ blocks $D_\beta$ were also computed directly.
 \item \textbf{Lemmas:} Lemmas~\ref{lem:gauss} and~\ref{lem:parity} and all $48$ norm seeds were checked by enumeration.
-\item \textbf{Partial difference set:} it was checked from its file by counting all $312^2$ quotients.
-\item \textbf{Groups:} $\Aut\Gamma$ was computed with bliss through python-igraph; the group identification and the subgroup classes with GAP.
+\item \textbf{Partial difference set:} verified directly from its file by computing all $312^2$ products $de^{-1}$.
+\item \textbf{Groups:} $|\Aut\Gamma|$ was computed with bliss through python-igraph for all graphs of Table~\ref{tab:witnesses}; $G$ was identified with GAP, which also computed $\Aut\Gamma$ and its subgroup classes for the original Cayley graph.
 \item \textbf{Remark~\ref{rem:allseeds}:} by exhaustive enumeration.
 \end{itemize}
 
 \subsection*{Use of AI}
-An AI assistant was used for the search and verification programs and a first draft of the text. \todo{author to confirm and finalize this statement.}
-
+An AI assistant was used for the search and verification programs and a first draft of the text. Specifically, the first constructions were proposed by GPT-6.2 Astra and further audited by Claude Opus 5.5 which the author worked with to draft the first version of the manuscript.
 \bibliographystyle{plainnat}
 \bibliography{refs}
 

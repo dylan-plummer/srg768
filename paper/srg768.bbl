@@ -9,8 +9,9 @@
 Andrew~C. Brady.
 \newblock New strongly regular graphs found via local search for partial
   difference sets.
-\newblock \emph{Electron. J. Combin.}, 32:\penalty0 P1.24, 2025.
-\newblock arXiv:2406.09550.
+\newblock \emph{Electron. J. Combin.}, 32\penalty0 (1):\penalty0 Paper No.
+  1.24, 2025.
+\newblock \doi{10.37236/13296}.
 
 \bibitem[Brouwer(2026)]{BrouwerTable}
 Andries~E. Brouwer.
@@ -24,11 +25,12 @@ Andries~E. Brouwer and Hendrik Van~Maldeghem.
   Mathematics and its Applications}.
 \newblock Cambridge University Press, 2022.
 
-\bibitem[Davis et~al.(2023)Davis, Polhill, Smith, and Swartz]{DPSS2023}
+\bibitem[Davis et~al.(2025)Davis, Polhill, Smith, and Swartz]{DPSS2023}
 James~A. Davis, John Polhill, Ken Smith, and Eric Swartz.
 \newblock Nonabelian partial difference sets constructed using abelian
   techniques.
-\newblock arXiv:2307.15648, 2023.
+\newblock \emph{Algebr. Comb.}, 8\penalty0 (2):\penalty0 399--419, 2025.
+\newblock \doi{10.5802/alco.416}.
 
 \bibitem[De~Winter and Wang(2017)]{DeWinterWang}
 Stefaan De~Winter and Zeying Wang.
@@ -41,6 +43,12 @@ S.~L. Ma.
 \newblock A survey of partial difference sets.
 \newblock \emph{Des. Codes Cryptogr.}, 4:\penalty0 221--261, 1994.
 
+\bibitem[Ma(1997)]{Ma1997}
+S.~L. Ma.
+\newblock Some necessary conditions on the parameters of partial difference
+  sets.
+\newblock \emph{J. Statist. Plann. Inference}, 62:\penalty0 47--56, 1997.
+
 \bibitem[Nelson and Swartz(2025)]{NelsonSwartz}
 Seth~R. Nelson and Eric Swartz.
 \newblock Character theoretic techniques for nonabelian partial difference
@@ -52,12 +60,5 @@ John Polhill, James~A. Davis, Ken~W. Smith, and Eric Swartz.
 \newblock Genuinely nonabelian partial difference sets.
 \newblock \emph{J. Combin. Des.}, 32\penalty0 (7):\penalty0 351--370, 2024.
 \newblock \doi{10.1002/jcd.21938}.
-
-\bibitem[Swartz and Tauscheck(2021)]{SwartzTauscheck}
-Eric Swartz and Gabrielle Tauscheck.
-\newblock Restrictions on parameters of partial difference sets in nonabelian
-  groups.
-\newblock \emph{J. Combin. Des.}, 2021.
-\newblock \doi{10.1002/jcd.21754}.
 
 \end{thebibliography}
