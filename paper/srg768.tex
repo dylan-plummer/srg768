@@ -38,7 +38,7 @@
 \begin{document}
 
 \begin{abstract}
-We construct strongly regular graphs with parameters $(768,312,136,120)$. No graph with these parameters or with the complementary parameters $(768,455,262,280)$ was known. The vertex set is three copies of $V=\F_{16}^2$. Inside each copy, adjacency is given by eight lines of the Desarguesian spread. Between two copies it is given by a set $B\subseteq V$ of size $96$ whose Fourier transform is $\pm16$ on four punctured spread lines, $96$ at $0$, and $0$ elsewhere. Such sets come from a signed function defined using the norm $\F_{16}\to\F_4$, and the proof that the Fourier transform takes only these values reduces to a parity property of quadratics over $\F_4$. The construction has free parameters, and $1000$ random members give at least $999$ pairwise non-isomorphic graphs. One member is a Cayley graph on the nonabelian group $C_2^4\times(C_2^4\rtimes C_3)$. This gives a $(768,312,136,120)$ partial difference set, a parameter set that no abelian group admits. The construction generalizes formally to $n$ fibres $\F_q^2$, and the parameter arithmetic then allows several other open parameter sets; we show that none of them can be realized this way, because over a prime field the sets joining two fibres are forced to be cosets of lines or their complements.
+We construct strongly regular graphs with parameters $(768,312,136,120)$. No graph with these parameters or with the complementary parameters $(768,455,262,280)$ was known. The vertex set is three copies of $V=\F_{16}^2$. Inside each copy, adjacency is given by eight lines of the Desarguesian spread. Between two copies it is given by a set $B\subseteq V$ of size $96$ whose Fourier transform is $\pm16$ on four punctured spread lines, $96$ at $0$, and $0$ elsewhere. Such sets come from a signed function defined using the norm $\F_{16}\to\F_4$, and the proof that the Fourier transform takes only these values reduces to a parity property of quadratics over $\F_4$. An exhaustive search shows that, up to affine maps of $V$, this set $B$ is unique. The construction has free parameters, and $1000$ random members give at least $999$ pairwise non-isomorphic graphs. One member is a Cayley graph on the nonabelian group $C_2^4\times(C_2^4\rtimes C_3)$. This gives a $(768,312,136,120)$ partial difference set, a parameter set that no abelian group admits. The construction generalizes formally to $n$ fibres $\F_q^2$, and the parameter arithmetic then allows several other open parameter sets; we show that none of them can be realized this way, because over a prime field the sets joining two fibres are forced to be cosets of lines or their complements.
 \end{abstract}
 
 \maketitle
@@ -51,7 +51,7 @@ A strongly regular graph $\srg(v,k,\lambda,\mu)$ is a $k$-regular graph on $v$ v
 \begin{theorem}\label{thm:main}
 There exist strongly regular graphs with parameters $(768,312,136,120)$, and hence also with parameters $(768,455,262,280)$. More precisely:
 \begin{enumerate}
-\item Construction~\ref{con:graph} gives a $\srg(768,312,136,120)$ for every choice of three seeds (Definition~\ref{def:seed}) with pairwise disjoint sets of support lines, and such seeds exist (Proposition~\ref{prop:normseed}).
+\item Construction~\ref{con:graph} gives a $\srg(768,312,136,120)$ for every choice of three seeds (Definition~\ref{def:seed}) with pairwise disjoint sets of support lines, and such seeds exist (Proposition~\ref{prop:normseed}). Proposition~\ref{prop:allseeds} determines all seeds.
 \item One member is a Cayley graph on the group $G=C_2^4\times(C_2^4\rtimes C_3)$, whose GAP identifier is $(768,\,1085323)$. Hence $G$ contains a regular $(768,312,136,120)$ partial difference set.
 \item The construction gives many non-isomorphic graphs: $1000$ random members include at least $999$ pairwise non-isomorphic graphs.
 \end{enumerate}
@@ -165,8 +165,21 @@ The scalars $C_5=\ker N\le F^*$ act on $V$, and each punctured spread line split
 \item They form a single $\GL(2,16)$-orbit, the orbit of the norm seeds; the stabilizer of a seed has order $15$.
 \item Their sets of support lines are exactly the $340$ four-sets contained in one of the $68$ sublines $\PG(1,4)\subset\PG(1,16)$, equivalently the four-sets with cross-ratios in $\{\omega,\omega^2\}$. Each such four-set carries $12$ seeds.
 \end{itemize}
-Seeds that are not $C_5$-invariant also exist: if $z$ is a seed then so is $z\chi_c$ for every $c\in V$, which corresponds to translating $B$ by $c$.
 \end{remark}
+
+Seeds that are not $C_5$-invariant also exist: if $z$ is a seed then so is $z\chi_c$ for every $c\in V$, which corresponds to translating $B$ by $c$. There are no others.
+
+\begin{proposition}[All seeds]\label{prop:allseeds}
+Every seed is $z\chi_c$ for a $C_5$-invariant seed $z$ and some $c\in V$. Each of the $340$ subline four-sets carries exactly $12\cdot256=3072$ seeds, and no other set of four spread lines carries any, so there are $1{,}044{,}480$ seeds in total. In particular, the sets $B$ of Lemma~\ref{lem:B} form a single orbit under the affine group $\mathrm{AGL}(2,16)$.
+\end{proposition}
+
+\begin{proof}
+The group $\Gamma\mathrm{L}(2,16)$ permutes seeds. For $\GL(2,16)$ this is Lemma~\ref{lem:GL}. The Frobenius map $(x,y)\mapsto(x^2,y^2)$ permutes the spread lines and preserves the pairing, since $\Tr(a^2x^2)=\Tr(ax)$. This action maps $C_5$-invariant seeds to $C_5$-invariant seeds, because $C_5$ consists of scalars and is normalized by the Frobenius, and it maps character twists to character twists. The group $\mathrm{P}\Gamma\mathrm{L}(2,16)$ is $3$-transitive on the $17$ spread lines, so the orbit of a four-set is determined by its cross-ratios up to the Frobenius. There are two orbits: the $340$ subline four-sets and the remaining $2040$. It therefore suffices to treat one four-set from each orbit, and we take $\{L_0,L_1,L_t,L_{t+1}\}$ and the subline $\{L_0,L_1,L_\omega,L_{\omega^2}\}$.
+
+For a fixed four-set, the seed conditions form a $0/1$ integer program, with one variable for the sign of $z$ at each of the $60$ support points and one variable $((Hz)(v)+6)/16$ for each $v\in V$. We added one constraint excluding each known seed $z\chi_c$: none for the first four-set, and $3072$ for the subline, all distinct. The CP-SAT solver of OR-Tools reports both programs infeasible.
+
+For the last statement, if $B$ corresponds to $z$, then $B+c$ corresponds to $z\chi_c$, and by Lemma~\ref{lem:GL} the set $(M^\top)^{-1}B$ corresponds to $z\circ M^{-1}$. The $C_5$-invariant seeds form one $\GL(2,16)$-orbit (Remark~\ref{rem:allseeds}), so all sets $B$ form one $\mathrm{AGL}(2,16)$-orbit.
+\end{proof}
 
 %=====================================================================
 \section{The construction}\label{sec:construction}
@@ -181,7 +194,7 @@ An \emph{admissible triple} is a triple of seeds $z_0,z_1,z_2$ whose sets of sup
 
 Every vertex has $120+96+96=312$ neighbours. The translations $(i,x)\mapsto(i,x+c)$ are automorphisms, so $|\Aut\Gamma|\ge256$.
 
-Proposition~\ref{prop:normseed} gives many admissible triples. For example, take three of the four additive cosets of $K$ in $F$, say $h_0+K$, $h_1+K$ and $h_2+K$, and set $z_i=z_{h_i,\mu_i,\nu_i}$ for any $\mu_i\in K$ and $\nu_i\in K^*$. More generally, one can take any three pairwise disjoint four-sets, each contained in a subline $\PG(1,4)$, with any of the $12$ seeds on each, multiplied by characters (Remark~\ref{rem:allseeds}).
+Proposition~\ref{prop:normseed} gives many admissible triples. For example, take three of the four additive cosets of $K$ in $F$, say $h_0+K$, $h_1+K$ and $h_2+K$, and set $z_i=z_{h_i,\mu_i,\nu_i}$ for any $\mu_i\in K$ and $\nu_i\in K^*$. More generally, one can take any three pairwise disjoint four-sets, each contained in a subline $\PG(1,4)$, with any of the $12$ seeds on each, multiplied by characters (Remark~\ref{rem:allseeds}). By Proposition~\ref{prop:allseeds}, every admissible triple is of this form.
 
 %=====================================================================
 \section{Proof of Theorem~\ref{thm:main}(1)}\label{sec:proof}
@@ -336,7 +349,7 @@ Do seeds exist for $q=25$ and $q=27$? What are the analogues of the norm seeds t
 \end{question}
 
 \begin{question}
-Classify all seeds on $\F_{16}^2$, not only the $C_5$-invariant ones and their character twists. How many isomorphism classes does Construction~\ref{con:graph} produce?
+By Proposition~\ref{prop:allseeds} the admissible triples are known explicitly. How many isomorphism classes does Construction~\ref{con:graph} produce?
 \end{question}
 
 \begin{question}
@@ -361,6 +374,7 @@ The checks below use code written independently of the original search code.
 \item \textbf{Partial difference set:} verified directly from its file by computing all $312^2$ products $de^{-1}$.
 \item \textbf{Groups:} $|\Aut\Gamma|$ was computed with bliss through python-igraph for all graphs of Table~\ref{tab:witnesses}; $G$ was identified with GAP, which also computed $\Aut\Gamma$ and its subgroup classes for the original Cayley graph.
 \item \textbf{Remark~\ref{rem:allseeds}:} by exhaustive enumeration.
+\item \textbf{Proposition~\ref{prop:allseeds}:} the two integer programs were solved with CP-SAT (OR-Tools 9.15) using four threads, in about $5$ and $40$ minutes. The solver does not output a certificate of infeasibility, so this step rests on the correctness of the solver.
 \end{itemize}
 
 \subsection*{Use of AI}

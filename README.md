@@ -40,6 +40,9 @@ Notation: F = F_16 ⊃ K = F_4, N(a) = a^5 is the norm F → K, and V = F^2 is p
      - Parity: for each (x, y), the number of μ ∈ K with N(x + μy) ∈ {0, ν⁻¹} is even.
    - **All C5-invariant seeds.** There are 4080 of them, forming one GL(2,16)-orbit. They live exactly on the 340
      four-subsets of sublines PG(1,4).
+   - **All seeds.** Every seed is z·χ_c for a C5-invariant seed z and a character χ_c, so there are
+     340 × 3072 = 1,044,480 seeds, and the sets B form a single AGL(2,16)-orbit (Proposition 3.8; CP-SAT
+     infeasibility, `code/newseeds.py`).
 2. **Graph.** Take three fibres V and three seeds z_i with pairwise disjoint support lines S_i.
    - Fibre i is joined internally by the punctured annihilators of the eight lines S_{i−1} ∪ S_i.
    - (i, x) ~ (i+1, y) iff x + y ∈ B_i.
@@ -59,6 +62,7 @@ Notation: F = F_16 ⊃ K = F_4, N(a) = a^5 is the norm F → K, and V = F^2 is p
 | `code/verify_srg.py` | independent numpy verifier (A² identity on all pairs); reads multi-graph graph6 files |
 | `code/invariants768.py` | \|Aut\| and orbits (bliss), four-cliques per fibre, canonical hashes; isomorphism with the original files |
 | `code/seed_search.py` | exhaustive search for C5-invariant seeds; `gl` argument: GL(2,16)-orbit check |
+| `code/newseeds.py` | classification of all seeds: CP-SAT with the known seeds excluded, one four-set per orbit (needs OR-Tools) |
 | `code/cayley768.py`, `code/check_pds.py` | Cayley group law and PDS counts; GAP scripts for IdGroup and Aut |
 | `code/prolific768.py` | random members, isomorphism-class count |
 | `code/families.py`, `code/template_q3.py` | parameter analysis of the template; the q = 3 instance (Schläfli) |
@@ -84,7 +88,7 @@ Integer encoding: F_16 = F_2[t]/(t^4+t+1), with the bits of an integer 0..15 giv
 
 ## Reproduce
 
-Python 3.10+ with numpy. The invariant scripts also need python-igraph, and the group checks need GAP.
+Python 3.10+ with numpy. The invariant scripts also need python-igraph, the seed classification needs OR-Tools, and the group checks need GAP.
 
 ```sh
 ./verify_all.sh                         # all graph files, all pairs
@@ -92,6 +96,7 @@ cd code
 python srg768.py                        # rebuild both constructions, spectral certificate, all-pairs check
 python invariants768.py                 # Aut, four-cliques, isomorphism with original/ files
 python seed_search.py; python seed_search.py gl
+python newseeds.py 0,1,2,3 4; python newseeds.py 0,1,6,7 4   # about 5 and 40 minutes
 python cayley768.py && gap -q ../checks/logs/cayley768.g
 python check_pds.py ../graphs/pds768_norm_cayley.txt
 python prolific768.py 1000 2026 > prolific.jsonl

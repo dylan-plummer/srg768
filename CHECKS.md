@@ -24,6 +24,7 @@ from the mathematical description only and shares no code with the original scri
 | Lemma 3.5 (Gauss periods), Lemma 3.6 (parity), all 48 norm seeds | `srg768.parity_lemma`, `gauss_period_lemma`, `is_seed` by enumeration | `norm_lemmas.log` |
 | C5-invariant seeds: 4080 in total; 12 on each of the 340 subline four-sets; none on the other 2040 four-sets | `seed_search.py` (all 2380 four-sets × 4096 sign patterns) | `seed_search.log`, `seeds_base.json` |
 | The 4080 C5-invariant seeds are exactly the GL(2,16)-images of one norm seed | `seed_search.py gl` | `seed_gl_orbit.log` |
+| Proposition 3.8: every seed is z·χ_c with z C5-invariant; 3072 seeds on each subline four-set, none on the other orbit. One four-set per PΓL(2,16)-orbit (orbits by cross-ratio class, `seed_search.log`); CP-SAT (OR-Tools 9.15, 4 threads) with all known seeds excluded reports INFEASIBLE for both. CP-SAT gives no infeasibility certificate | `newseeds.py 0,1,2,3 4`, `newseeds.py 0,1,6,7 4` | `newseeds_0_1_2_3.log`, `newseeds_0_1_6_7.log` |
 | The original seed is z_{0,0,1} ∘ M0^{-1} with M0 = ((t²+1, t²), (0, 1)) (Section 7) | `original_seed_check.py` | `original_seed_check.log` |
 
 ## Cayley graph and partial difference set
