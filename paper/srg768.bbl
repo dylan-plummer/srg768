@@ -32,11 +32,13 @@ James~A. Davis, John Polhill, Ken Smith, and Eric Swartz.
 \newblock \emph{Algebr. Comb.}, 8\penalty0 (2):\penalty0 399--419, 2025.
 \newblock \doi{10.5802/alco.416}.
 
-\bibitem[De~Winter and Wang(2017)]{DeWinterWang}
+\bibitem[De~Winter and Wang(2019)]{DeWinterWang}
 Stefaan De~Winter and Zeying Wang.
-\newblock Non-existence of partial difference sets of order $8p^3$ in {A}belian
-  groups.
-\newblock arXiv:1707.08662, 2017.
+\newblock Non-existence of partial difference sets in {A}belian groups of order
+  $8p^3$.
+\newblock \emph{Des. Codes Cryptogr.}, 87\penalty0 (4):\penalty0 757--768,
+  2019.
+\newblock \doi{10.1007/s10623-018-0508-z}.
 
 \bibitem[Ma(1994)]{Ma1994}
 S.~L. Ma.

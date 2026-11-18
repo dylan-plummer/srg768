@@ -1,0 +1,6 @@
+rebuilt from data/dim2_seed.json: srg on all pairs; wrote srg768_312_136_120_dim2_cayley.g6
+support type (all 24 orders): {'jordan'}
+fibre 0: 9 four-dim subspaces in C_i + 0; four-sets by type {'quartic': 38, 'jordan': 30, 'semisimple3': 3}
+fibre 1: 9 four-dim subspaces in C_i + 0; four-sets by type {'quartic': 38, 'semisimple3': 3, 'jordan': 30}
+fibre 2: 9 four-dim subspaces in C_i + 0; four-sets by type {'jordan': 30, 'quartic': 38, 'semisimple3': 3}
+canonical hash 75340d9d894097e4 ; Jordan graph of Section 9 fab099f63c9b44c0

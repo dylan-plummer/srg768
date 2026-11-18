@@ -9,6 +9,7 @@ noted. The code in `../code/` was written separately from the mathematical descr
 | `construct_405.py` | helper module imported by `construct768.py` (its `check` and `graph6` functions); copied from the 405 construction directory |
 | `ports768.py`, `ports768.jsonl` | the seed search over the two semilinear orbits of four spread lines, and its output (12 signings on one orbit, none on the other) |
 | `README_construction_routes.md` | the original write-up. Links were changed to point at `../graphs/` and `../code/verify_srg.py`; a link to unrelated search notes was removed |
+| `jordan/` | the scripts that produced the Jordan-type Cayley graph of Section 9 (`../graphs/srg768_312_136_120_jordan_cayley.g6`); see `jordan/README.md` |
 
 The graph files written by `construct768.py` were renamed in `../graphs/`:
 

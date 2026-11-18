@@ -1,0 +1,18 @@
+support: 4-dim subspaces in supp z + 0: 4 ; meet pairwise in 0: True ; |supp z| = 60
+Hz values: {-6: 160, 10: 96}
+operator type of the support (in the stored order of subspaces, all 24 orders): Counter({'jordan': 24})
+M: order 3 True ; fixed points 1
+rebuilt graph: srg(768,312,136,120) on all pairs; complement srg(768,455,262,280)
+identical to graphs/srg768_312_136_120_jordan_cayley.g6 (same labelling): True
+tau is an automorphism: True
+D = N(0): inverse-closed, PDS counts (312 at 1, 136 on D, 120 off D): True ; left multiplication by generators of G are automorphisms and Cay(G,D) = graph: True
+wrote ../checks/logs/jordan768.g
+|Aut| = 768, orbits [768], four-cliques through (i,0): [444352, 444352, 444352], canonical hash fab099f63c9b44c0
+Jordan graph, fibre 0: 8 four-dim subspaces in C_i + 0; four-sets meeting pairwise in 0 by operator type (the same for all 24 orders) {'jordan': 21, 'semisimple3': 4, 'quartic': 45}
+Jordan graph, fibre 1: 8 four-dim subspaces in C_i + 0; four-sets meeting pairwise in 0 by operator type (the same for all 24 orders) {'semisimple3': 4, 'jordan': 21, 'quartic': 45}
+Jordan graph, fibre 2: 8 four-dim subspaces in C_i + 0; four-sets meeting pairwise in 0 by operator type (the same for all 24 orders) {'quartic': 45, 'jordan': 21, 'semisimple3': 4}
+Construction 4.1 fibre sets C' (T = {0,1,w,w^2} u S, S running over the 103 subline four-sets disjoint from it): (number of 4-dim subspaces in C' + 0, some Jordan 4-tuple) -> count
+   (8, False): 63
+   (13, True): 24
+   (18, False): 16
+a set C' with exactly 8 subspaces and a Jordan 4-tuple exists: False

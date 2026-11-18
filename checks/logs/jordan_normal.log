@@ -1,0 +1,12 @@
+normal-form graph: srg(768,312,136,120) verified on all pairs
+tau = (i,x) -> (i+1, Rx) is an automorphism: True ; R fixed points: 1
+canonical hash normal form fab099f63c9b44c0 ; certificate graph fab099f63c9b44c0 ; isomorphic: True
+Table 3 (sign of z at the vector with parameter u; w2 = w^2)
+u: (1,0) (w,0) (w2,0) (0,1) (1,1) (w,1) (w2,1) (0,w) (1,w) (w,w) (w2,w) (0,w2) (1,w2) (w,w2) (w2,w2)
+X + - - + + + + - - + + - + - +
+Y + - - - + + - - - + + + + + +
+D - + + - + + - - - - - - + - +
+J + + + - + + - - - + + + + + +
+negative signs: 25
+A = [['1', '1', '0', '0'], ['0', 'w2', '0', '0'], ['w2', '1', 'w2', '1'], ['1', '1', '0', '0']]
+B = [['w2', '0', 'w2', '0'], ['w', '0', '1', 'w2'], ['0', '1', 'w2', '0'], ['1', 'w2', 'w2', '0']]

@@ -29,7 +29,7 @@
 \newcommand{\Cay}{\mathrm{Cay}}
 \newcommand{\todo}[1]{\textcolor{red}{[TODO: #1]}}
 
-\title[Strongly regular graphs on $768$ vertices]{Strongly regular graphs with parameters $(768,312,136,120)$\\ and a nonabelian partial difference set}
+\title[Strongly regular graphs and partial difference sets on $768$ vertices]{Strongly regular graphs and nonabelian partial difference sets with parameters $(768,312,136,120)$}
 \author{Dylan Plummer}
 \address{Case Western Reserve University}
 \email{dylan.plummer@case.edu}
@@ -38,7 +38,7 @@
 \begin{document}
 
 \begin{abstract}
-We construct strongly regular graphs with parameters $(768,312,136,120)$. No graph with these parameters or with the complementary parameters $(768,455,262,280)$ was known. The vertex set is three copies of $V=\F_{16}^2$. Inside each copy, adjacency is given by eight lines of the Desarguesian spread. Between two copies it is given by a set $B\subseteq V$ of size $96$ whose Fourier transform is $\pm16$ on four punctured spread lines, $96$ at $0$, and $0$ elsewhere. Such sets come from a signed function defined using the norm $\F_{16}\to\F_4$, and the proof that the Fourier transform takes only these values reduces to a parity property of quadratics over $\F_4$. An exhaustive search shows that, up to affine maps of $V$, this set $B$ is unique. The construction has free parameters, and $1000$ random members give at least $999$ pairwise non-isomorphic graphs. One member is a Cayley graph on the nonabelian group $C_2^4\times(C_2^4\rtimes C_3)$. This gives a $(768,312,136,120)$ partial difference set, a parameter set that no abelian group admits. The construction generalizes formally to $n$ fibres $\F_q^2$, and the parameter arithmetic then allows several other open parameter sets; we show that none of them can be realized this way, because over a prime field the sets joining two fibres are forced to be cosets of lines or their complements.
+We construct strongly regular graphs with parameters $(768,312,136,120)$. No graph with these parameters or with the complementary parameters $(768,455,262,280)$ was known. The vertex set is three copies of $V=\F_{16}^2$. Inside each copy, adjacency is given by eight lines of the Desarguesian spread. Between two copies it is given by a set $B\subseteq V$ of size $96$ whose Fourier transform is $\pm16$ on four punctured spread lines, $96$ at $0$, and $0$ elsewhere. Such sets come from a signed function defined using the norm $\F_{16}\to\F_4$, and the proof that the Fourier transform takes only these values reduces to a parity property of quadratics over $\F_4$. An exhaustive search shows that, up to affine maps of $V$, a set $B$ with this property is unique. The construction has free parameters, and $1000$ random members give at least $999$ pairwise non-isomorphic graphs. Some members are Cayley graphs on the nonabelian group $C_2^4\times(C_2^4\rtimes C_3)$, and they give at least two inequivalent $(768,312,136,120)$ partial difference sets, a parameter set that no abelian group admits. The proof also works when the four lines are replaced by four $4$-dimensional subspaces over $\F_2$ meeting pairwise in $0$. Some such configurations lie in no Desarguesian spread, and they give Cayley graphs on two further groups, the Frobenius group $C_2^8\rtimes C_3$ and $C_2^2\times(C_2^6\rtimes C_3)$; in both cases the full automorphism group is the group acting regularly. These three groups are all the groups that the construction can reach as regular groups containing the translations. The construction generalizes formally to $n$ fibres $\F_q^2$, and the parameter arithmetic then allows several other open parameter sets; we show that none of them can be realized this way, because over a prime field the sets joining two fibres are forced to be cosets of lines or their complements.
 \end{abstract}
 
 \maketitle
@@ -52,14 +52,15 @@ A strongly regular graph $\srg(v,k,\lambda,\mu)$ is a $k$-regular graph on $v$ v
 There exist strongly regular graphs with parameters $(768,312,136,120)$, and hence also with parameters $(768,455,262,280)$. More precisely:
 \begin{enumerate}
 \item Construction~\ref{con:graph} gives a $\srg(768,312,136,120)$ for every choice of three seeds (Definition~\ref{def:seed}) with pairwise disjoint sets of support lines, and such seeds exist (Proposition~\ref{prop:normseed}). Proposition~\ref{prop:allseeds} determines all seeds.
-\item One member is a Cayley graph on the group $G=C_2^4\times(C_2^4\rtimes C_3)$, whose GAP identifier is $(768,\,1085323)$. Hence $G$ contains a regular $(768,312,136,120)$ partial difference set.
+\item Some members are Cayley graphs on the group $G=C_2^4\times(C_2^4\rtimes C_3)$, whose GAP identifier is $(768,\,1085323)$, and two of them are not isomorphic. Hence $G$ contains at least two inequivalent regular $(768,312,136,120)$ partial difference sets.
 \item The construction gives many non-isomorphic graphs: $1000$ random members include at least $999$ pairwise non-isomorphic graphs.
+\item A variant built on four subspaces of $\F_2^8$ that lie in no Desarguesian spread gives Cayley graphs on the Frobenius group $C_2^8\rtimes C_3$ and on $C_2^2\times(C_2^6\rtimes C_3)$, whose GAP identifiers are $(768,\,1085321)$ and $(768,\,1085320)$. In both cases the full automorphism group is the group acting regularly, so each of these groups contains a regular $(768,312,136,120)$ partial difference set. Neither graph is isomorphic to a graph of Construction~\ref{con:graph}. No other group arises from the construction as a regular group containing the translations.
 \end{enumerate}
 \end{theorem}
 
-The partial difference set of Theorem~\ref{thm:main}(2) is nontrivial: neither $D\cup\{1\}$ nor $G\setminus D$ is a subgroup, since $313$ and $456$ do not divide $768$. It cannot live in an abelian group. By results of Ma~\cite{Ma1994,Ma1997} (see~\cite[Prop.~1.1]{DeWinterWang}), an abelian group with a cyclic Sylow $p$-subgroup and order different from $p$ contains no nontrivial partial difference set, and every group of order $768=2^8\cdot3$ has a cyclic Sylow $3$-subgroup. So the partial difference set is ``genuinely nonabelian'' in the sense of~\cite{DPSS2023,PDSS2024}. Nelson and Swartz~\cite{NelsonSwartz} test their restrictions for nonabelian partial difference sets against the feasible parameter sets but omit $v\in\{512,768,1024\}$ because of the number of groups. The closest precedent we know is Brady's $\srg(147,66,25,33)$~\cite{Brady2025}, found by local search as a partial difference set in nonabelian groups of order $147=3\cdot7^2$; by the same argument of Ma, no abelian group of order $147$ admits one. The complement of that graph has the parameters of the case $q=7$ of the template in Section~\ref{sec:template}, although Proposition~\ref{prop:prime} shows that it does not arise from the template.
+Here two partial difference sets $D,D'$ in a group are equivalent if an automorphism of the group maps $D$ to $D'$; equivalent partial difference sets give isomorphic Cayley graphs. The partial difference sets of Theorem~\ref{thm:main}(2) and~(4) are nontrivial: neither $D\cup\{1\}$ nor the complement of $D$ is a subgroup, since $313$ and $456$ do not divide $768$. They cannot live in an abelian group. By results of Ma~\cite{Ma1994,Ma1997} (see~\cite[Prop.~1]{DeWinterWang}), an abelian group with a cyclic Sylow $p$-subgroup and order different from $p$ contains no nontrivial partial difference set, and every group of order $768=2^8\cdot3$ has a cyclic Sylow $3$-subgroup. So these partial difference sets are ``genuinely nonabelian'' in the sense of~\cite{DPSS2023,PDSS2024}. Nelson and Swartz~\cite{NelsonSwartz} test their restrictions for nonabelian partial difference sets against the feasible parameter sets but omit $v\in\{512,768,1024\}$ because of the number of groups. The closest precedent we know is Brady's $\srg(147,66,25,33)$~\cite{Brady2025}, found by local search as a partial difference set in nonabelian groups of order $147=3\cdot7^2$; by the same argument of Ma, no abelian group of order $147$ admits one. The complement of that graph has the parameters of the case $q=7$ of the template in Section~\ref{sec:template}, although Proposition~\ref{prop:prime} shows that it does not arise from the template.
 
-The construction is in Section~\ref{sec:construction} and the seeds in Section~\ref{sec:seeds}. The proof is a $3\times3$ block computation in the character basis (Section~\ref{sec:proof}). Section~\ref{sec:cayley} describes the Cayley member. Section~\ref{sec:template} places the construction in a template with $n$ fibres $\F_q^2$ and shows that for prime $q$ the template only gives graphs in which the sets joining two fibres are cosets of lines or their complements.
+The construction is in Section~\ref{sec:construction} and the seeds in Section~\ref{sec:seeds}. The proof is a $3\times3$ block computation in the character basis (Section~\ref{sec:proof}). Section~\ref{sec:cayley} describes the Cayley members in $G$. Section~\ref{sec:template} places the construction in a template with $n$ fibres $\F_q^2$ and shows that for prime $q$ the template only gives graphs in which the sets joining two fibres are cosets of lines or their complements. Section~\ref{sec:jordan} replaces the spread lines by arbitrary $4$-dimensional subspaces over $\F_2$ and constructs the graphs of Theorem~\ref{thm:main}(4).
 
 %=====================================================================
 \section{Notation}\label{sec:notation}
@@ -222,7 +223,7 @@ There are $3\cdot4\cdot15=180$ vectors $\beta$ of the second kind and $75$ of th
 \end{proof}
 
 %=====================================================================
-\section{A Cayley member and a partial difference set}\label{sec:cayley}
+\section{Cayley members and partial difference sets}\label{sec:cayley}
 
 Fix $c\in F\setminus K$, and let $M=\begin{pmatrix}1&0\\c&\omega\end{pmatrix}$. Then $M^3=I$, and $M$ maps the slope $m$ to $c+\omega m$. So $M$ permutes three of the four additive cosets of $K$ cyclically:
 \[
@@ -248,7 +249,7 @@ Let $\Gamma$ be the graph of Proposition~\ref{prop:cayley} for $c=t$, $\mu_0=0$ 
 The scalars $\lambda\in C_5$ commute with $R$, and the seeds $z_i$ are $C_5$-invariant because $N(\lambda a)=N(a)$. So $\lambda$ fixes every $B_i$ and every $C_i$, and the maps in the statement are automorphisms. They form a group of order $3\cdot5\cdot256=3840$. The program bliss gives $|\Aut\Gamma|=3840$, so this is all of $\Aut\Gamma$. The group is an extension of $V$ by $C_3\times C_5\cong C_{15}$, hence solvable, and a subgroup of order $768=|\Aut\Gamma|/5$ is a Hall $\{2,3\}$-subgroup. By Hall's theorem all such subgroups are conjugate to $G$. A group acting regularly on the vertices has order $768$, so it is conjugate to $G$.
 \end{proof}
 
-The same argument applies to the Cayley graph built from the original seed (Section~\ref{sec:properties}), for which $\Aut\Gamma$ was also computed directly with GAP. The two Cayley graphs are not isomorphic, although their automorphism groups are isomorphic and their four-clique counts agree.
+The same argument applies to the Cayley graph built from the original seed (Section~\ref{sec:properties}), for which $\Aut\Gamma$ was also computed directly with GAP. The two Cayley graphs are not isomorphic, although their automorphism groups are isomorphic and their four-clique counts agree. So their partial difference sets in $G$ are inequivalent.
 
 %=====================================================================
 \section{Properties and non-isomorphic members}\label{sec:properties}
@@ -352,8 +353,112 @@ Do seeds exist for $q=25$ and $q=27$? What are the analogues of the norm seeds t
 By Proposition~\ref{prop:allseeds} the admissible triples are known explicitly. How many isomorphism classes does Construction~\ref{con:graph} produce?
 \end{question}
 
+%=====================================================================
+\section{Seeds on other partial spreads}\label{sec:jordan}
+
+The proof of Theorem~\ref{thm:srg} does not use the field structure of $V$. It uses only that the support lines are $4$-dimensional $\F_2$-subspaces of $V$ meeting pairwise in $0$, and that the pairing is a nondegenerate symmetric $\F_2$-bilinear form. Indeed, for every $4$-dimensional subspace $L$ the annihilator $L^\perp$ has dimension $4$ and~\eqref{eq:line} holds. If $L\cap L'=0$ then $L+L'=V$, so $L^\perp\cap L'^\perp=0$, and the eight punctured annihilators forming $C_i$ are again disjoint. We call a function $z\colon V\to\{0,1,-1\}$ a \emph{generalized seed} if its support is the union of four punctured $4$-dimensional subspaces meeting pairwise in $0$, its \emph{support subspaces}, and $Hz$ takes only the values $10$ and $-6$. A \emph{generalized admissible triple} consists of three generalized seeds whose twelve support subspaces meet pairwise in $0$. Construction~\ref{con:graph} and Theorem~\ref{thm:srg} carry over word for word, and so does Lemma~\ref{lem:GL} for every $M\in\GL(V)$ over $\F_2$, with $M^\top$ replaced by the adjoint $M^*$ defined by $\langle v,M\gamma\rangle=\langle M^*v,\gamma\rangle$.
+
+\begin{proposition}\label{prop:types}
+Let $A_1,A_2,A_3,A_4$ be $4$-dimensional subspaces of $V$ meeting pairwise in $0$. Write $A_3=\{a+\varphi(a):a\in A_1\}$ and $A_4=\{a+\varphi(\Lambda a):a\in A_1\}$, where $\varphi\colon A_1\to A_2$ is linear and $\Lambda\in\GL(A_1)$, using $V=A_1\oplus A_2$. Exactly one of the following holds.
+\begin{enumerate}
+\item[(a)] The characteristic polynomial of $\Lambda$ is irreducible. Then some $P\in\GL(V)$ maps $A_1,\dots,A_4$ to four spread lines that do not lie in a subline $\PG(1,4)$.
+\item[(b)] $\Lambda^2+\Lambda+1=0$. Then some $P\in\GL(V)$ maps $A_1,\dots,A_4$ to four spread lines of a subline.
+\item[(c)] $\Lambda$ has minimal polynomial $(X^2+X+1)^2$. Then no $P\in\GL(V)$ maps $A_1,\dots,A_4$ to four spread lines.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Since $A_4$ meets $A_1$ and $A_3$ only in $0$, both $\Lambda$ and $\Lambda+1$ are invertible, so the characteristic polynomial of $\Lambda$ has no root in $\F_2$. The only such polynomials of degree $4$ are the three irreducible quartics and $(X^2+X+1)^2$. If the characteristic polynomial is irreducible, then $\F_2[\Lambda]\cong F$ and $A_1$ is a $1$-dimensional $F$-space. Identifying $A_1$ with $F$ and $A_2$ with $F$ through $\varphi$ maps $A_1,A_2,A_3,A_4$ to $L_0,L_\infty,L_1,L_\lambda$, where $\lambda$ corresponds to $\Lambda$. Here $\lambda\notin K$, because $\Lambda^2+\Lambda+1\ne0$. If $\Lambda^2+\Lambda+1=0$, then $\F_2[\Lambda]\cong K$ and $A_1$ is a $2$-dimensional $K$-space. Identifying it with $F$ as a $K$-space, with $\Lambda$ acting as $\omega$, gives the slopes $0,\infty,1,\omega$ of a subline. In the remaining case $\Lambda$ is not semisimple. If $P$ maps $A_1,\dots,A_4$ to spread lines, then $\Lambda$ is conjugate to multiplication by an element of $F$ on a spread line, which is semisimple. So case (c) cannot be mapped to spread lines.
+\end{proof}
+
+The three cases are characterized by properties that do not refer to the order of $A_1,\dots,A_4$, so the type of a four-set does not depend on that order.
+
+Since Lemma~\ref{lem:GL} holds for all of $\GL(V)$, Proposition~\ref{prop:allseeds} describes the generalized seeds in cases (a) and (b). The minimal polynomial determines the conjugacy class of $\Lambda$, so $\GL(V)$ is transitive on ordered four-sets of type (c). For the rest of this section we use the model $V=\F_4^4$ with $\langle a,b\rangle=\Tr_{K/\F_2}(a_1b_1+\dots+a_4b_4)$, and the four-set of type (c)
+\[
+X=\{(u,0)\},\quad Y=\{(0,u)\},\quad \Delta=\{(u,u)\},\quad J=\{(u,\Lambda u)\},\qquad u\in\F_4^2,
+\]
+where $\Lambda(p,q)=(\omega p+q,\ \omega q)$.
+
+\begin{proposition}\label{prop:jordanseeds}
+There are exactly $3072$ generalized seeds with support subspaces $X,Y,\Delta,J$. They are the products $z\chi_c$ of $12$ of them with the $256$ characters.
+\end{proposition}
+
+\begin{proof}
+As in the proof of Proposition~\ref{prop:allseeds}, we write the conditions as a $0/1$ integer program. CP-SAT found a seed $z$, we excluded the $256$ seeds $z\chi_c$, and repeated. After $12$ rounds the program is infeasible.
+\end{proof}
+
+\begin{table}[ht]
+\centering
+\caption{A generalized seed on $X,Y,\Delta,J$: the sign of $z$ at $(u,0)$, $(0,u)$, $(u,u)$ and $(u,\Lambda u)$.}\label{tab:jordan}
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{c*{15}{c}}
+\toprule
+$u$ & $\binom{1}{0}$ & $\binom{\omega}{0}$ & $\binom{\omega^2}{0}$ & $\binom{0}{1}$ & $\binom{1}{1}$ & $\binom{\omega}{1}$ & $\binom{\omega^2}{1}$ & $\binom{0}{\omega}$ & $\binom{1}{\omega}$ & $\binom{\omega}{\omega}$ & $\binom{\omega^2}{\omega}$ & $\binom{0}{\omega^2}$ & $\binom{1}{\omega^2}$ & $\binom{\omega}{\omega^2}$ & $\binom{\omega^2}{\omega^2}$\\
+\midrule
+$X$ & $+$&$-$&$-$&$+$&$+$&$+$&$+$&$-$&$-$&$+$&$+$&$-$&$+$&$-$&$+$\\
+$Y$ & $+$&$-$&$-$&$-$&$+$&$+$&$-$&$-$&$-$&$+$&$+$&$+$&$+$&$+$&$+$\\
+$\Delta$ & $-$&$+$&$+$&$-$&$+$&$+$&$-$&$-$&$-$&$-$&$-$&$-$&$+$&$-$&$+$\\
+$J$ & $+$&$+$&$+$&$-$&$+$&$+$&$-$&$-$&$-$&$+$&$+$&$+$&$+$&$+$&$+$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Let $z$ be the generalized seed of Table~\ref{tab:jordan}, and let $M\colon V\to V$ be the $\F_2$-linear map $M(x)=Q_1x+Q_2\bar x$, where $\bar x=(x_1^2,\dots,x_4^2)$ and
+\[
+Q_1=\begin{pmatrix}1&1&0&0\\0&\omega^2&0&0\\\omega^2&1&\omega^2&1\\1&1&0&0\end{pmatrix},\qquad
+Q_2=\begin{pmatrix}\omega^2&0&\omega^2&0\\\omega&0&1&\omega^2\\0&1&\omega^2&0\\1&\omega^2&\omega^2&0\end{pmatrix}.
+\]
+
+\begin{proposition}\label{prop:jordan}
+The following hold.
+\begin{enumerate}
+\item $M$ has order $3$ and fixes only $0$. The twelve subspaces $M^iX$, $M^iY$, $M^i\Delta$, $M^iJ$ for $i=0,1,2$ meet pairwise in $0$, so the seeds $z_i=z\circ M^{-i}$ ($i=0,1,2$) form a generalized admissible triple, and the graph $\Gamma_J$ of Construction~\ref{con:graph} is a $\srg(768,312,136,120)$.
+\item Let $R=(M^*)^{-1}$. The map $(i,x)\mapsto(i+1,Rx)$ is an automorphism of $\Gamma_J$, and together with the translations it generates a group $G_J=V\rtimes\langle R\rangle$ acting regularly. Since $R$ fixes only $0$, $G_J$ is a Frobenius group with kernel $C_2^8$ and complement $C_3$; GAP identifies it as $\mathrm{SmallGroup}(768,1085321)$, with trivial centre.
+\item $\Aut\Gamma_J=G_J$. So $\Gamma_J$ is a Cayley graph of $G_J$ and of no other group, and the neighbourhood of $(0,0)$ is a $(768,312,136,120)$ partial difference set in $G_J$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+The first statement of (1) was checked directly; the rest of (1) is Theorem~\ref{thm:srg} for generalized seeds. Part (2) is proved as Proposition~\ref{prop:cayley}. For (3), bliss gives $|\Aut\Gamma_J|=768=|G_J|$.
+\end{proof}
+
+The group $G_J$ is not isomorphic to the group $G$ of Section~\ref{sec:cayley}, whose centre has order $16$. Every vertex of $\Gamma_J$ lies in $444352$ four-cliques, a number that differs from all those in Table~\ref{tab:witnesses}. The graph $\Gamma_J$ was found first in other coordinates. A linear change of coordinates moves its support to $X,Y,\Delta,J$, and we checked that the graph built from Table~\ref{tab:jordan} is isomorphic to the original one.
+
+\begin{proposition}\label{prop:notform}
+$\Gamma_J$ is not isomorphic to any graph of Construction~\ref{con:graph}.
+\end{proposition}
+
+\begin{proof}
+Let $\Gamma$ be a graph of Construction~\ref{con:graph} and suppose that $\psi\colon\Gamma_J\to\Gamma$ is an isomorphism. Then $\Aut\Gamma=\psi G_J\psi^{-1}$ has order $768$. The translations of $\Gamma$ form a subgroup of order $256$, which is therefore a Sylow $2$-subgroup of $\Aut\Gamma$. The subgroup $V$ of $G_J$ has index $3$, so it is normal and is the unique Sylow $2$-subgroup of $G_J$. Hence $\psi V\psi^{-1}$ is the translation group of $\Gamma$, and $\psi$ maps each fibre of $\Gamma_J$ onto a fibre of $\Gamma$. On a fibre, $\psi(x+v)=\psi(x)+\alpha(v)$ for the additive bijection $\alpha$ induced by conjugation, which is $\F_2$-linear. So $\alpha(C)=C'$ for a fibre connection set $C$ of $\Gamma_J$ and one, $C'$, of $\Gamma$, and $\alpha$ maps the $4$-dimensional subspaces contained in $C\cup\{0\}$ bijectively onto those contained in $C'\cup\{0\}$. For each fibre of $\Gamma_J$ there are exactly eight such subspaces, the eight annihilators, and $21$ of the $70$ four-sets among them are of type (c). So $C'\cup\{0\}$ contains exactly eight $4$-dimensional subspaces. It contains the annihilators of the eight spread lines in $T_i$, which are spread lines, so these are all of them. By Proposition~\ref{prop:types} no four spread lines form a four-set of type (c). This is a contradiction.
+\end{proof}
+
+So Construction~\ref{con:graph} does not give all graphs with these parameters. The scripts that found $\Gamma_J$ are included in the repository.
+
+\emph{Other groups.} The next proposition shows which groups can occur as regular groups of automorphisms that contain the translations.
+
+\begin{proposition}\label{prop:groups}
+Let $\Gamma$ be the graph of a generalized admissible triple, and let $H\le\Aut\Gamma$ act regularly on the vertices and contain the translations. Then $H\cong V\rtimes\langle\rho\rangle$ for some $\rho\in\GL(V)$ of order $3$ whose fixed space has dimension $0$, $2$ or $4$. So $H$ is isomorphic to $G_J$, to $C_2^2\times(C_2^6\rtimes C_3)$ or to the group $G$ of Section~\ref{sec:cayley}.
+\end{proposition}
+
+\begin{proof}
+The translation group $V$ has index $3$ in $H$, so it is normal. Let $h\in H$ have order $3$. Since $h\notin V$ and $H$ is transitive, $h$ permutes the fibres cyclically, say $h(i,x)=(i+1,h_i(x))$. Conjugation by $h$ maps the translation by $v$ to the translation by $\rho(v)$ for an automorphism $\rho$ of $V$, and since a translation moves every fibre by the same vector, $h_i(x)=\rho(x)+u_i$ with the same $\rho$ for every $i$. Then $\rho^3=1$ and $H=V\rtimes\langle h\rangle\cong V\rtimes\langle\rho\rangle$. If $\rho=1$, then $H$ is abelian, and Ma's theorem quoted in the introduction excludes it. Otherwise the fixed space of $\rho$ has dimension $8-2k$ with $k\in\{1,2,3,4\}$, and $k$ determines the conjugacy class of $\rho$, hence $H$ up to isomorphism. Since $h$ maps the edges between fibres $i$ and $i+1$ to those between fibres $i+1$ and $i+2$, we get $B_{i+1}=\rho(B_i)+c$ for some $c\in V$, so $(H1_{B_{i+1}})(\beta)=\chi_\beta(c)\,(H1_{B_i})(\rho^*\beta)$. Hence the support subspaces of $z_{i+1}$ are the images of those of $z_i$ under $(\rho^*)^{-1}$, whose fixed space has the same dimension as that of $\rho$. If this dimension were $6$, a $4$-dimensional support subspace $S$ of $z_i$ would meet the fixed space in a nonzero vector, which then lies in $S$ and in the support subspace $(\rho^*)^{-1}S$ of $z_{i+1}$. This is impossible, so $k\ge2$. For $k=4$ the group is a Frobenius group, isomorphic to $G_J$; for $k=2$ it is $G$, and for $k=3$ it is $C_2^2\times(C_2^6\rtimes C_3)$.
+\end{proof}
+
+The case $k=3$ does occur. Let $V=\F_2^8$ with the standard dot product, and let $M$ act as the identity on the first two coordinates and as $\left(\begin{smallmatrix}0&1\\1&1\end{smallmatrix}\right)$ on each of the three remaining pairs of coordinates. Then $M$ has order $3$ and a fixed space of dimension $2$. A random search found four $4$-dimensional subspaces of type (c) such that the twelve subspaces $M^iA_j$ meet pairwise in $0$, and CP-SAT found a generalized seed on them. The four subspaces and the seed are listed in the repository.
+
+\begin{proposition}\label{prop:dim2}
+The resulting graph $\Gamma_2$ is a $\srg(768,312,136,120)$, and $\Aut\Gamma_2$ is the group $V\rtimes\langle R\rangle\cong C_2^2\times(C_2^6\rtimes C_3)$, with GAP identifier $(768,\,1085320)$, acting regularly. Its centre has order $4$, and every vertex lies in $443812$ four-cliques. The graph $\Gamma_2$ is not isomorphic to $\Gamma_J$ or to any graph of Construction~\ref{con:graph}.
+\end{proposition}
+
+\begin{proof}
+All statements except the last were checked directly, with bliss and GAP as for $\Gamma_J$. The automorphism groups of $\Gamma_2$ and $\Gamma_J$ are not isomorphic. For Construction~\ref{con:graph}, the argument of Proposition~\ref{prop:notform} applies up to the point where it compares the $4$-dimensional subspaces in a fibre connection set: each $C_i\cup\{0\}$ of $\Gamma_2$ contains exactly nine of them. By Proposition~\ref{prop:allseeds} and the transitivity of $\mathrm{P}\Gamma\mathrm{L}(2,16)$ on subline four-sets, every fibre connection set $C'$ of Construction~\ref{con:graph} is, up to $\Gamma\mathrm{L}(2,16)$, obtained from $T=\{0,1,\omega,\omega^2\}\cup S$ with $S$ one of the $103$ subline four-sets disjoint from $\{0,1,\omega,\omega^2\}$. For these, $C'\cup\{0\}$ contains $8$, $13$ or $18$ subspaces of dimension $4$, never $9$.
+\end{proof}
+
+So partial difference sets with these parameters exist in at least three groups of order $768$, and by Proposition~\ref{prop:groups} the generalized construction gives no others when the regular group contains the translations. The remaining nonabelian group of the form $C_2^8\rtimes C_3$, namely $C_2^6\times A_4$, cannot occur.
+
 \begin{question}
-Is there a $(768,312,136,120)$ partial difference set in a group of order $768$ other than $C_2^4\times(C_2^4\rtimes C_3)$? Are there graphs with these parameters that are not of the form in Construction~\ref{con:graph}?
+Is there a $(768,312,136,120)$ partial difference set in a group of order $768$ other than the three groups above, for instance in $C_2^6\times A_4$ or in a group without an elementary abelian normal subgroup of order $256$? Are there graphs with these parameters that do not come from a generalized admissible triple?
 \end{question}
 
 %=====================================================================
@@ -367,18 +472,21 @@ The checks below use code written independently of the original search code.
   \begin{itemize}
   \item the two original-seed graphs and the complement of the original shear graph;
   \item the norm-seed Cayley and shear graphs;
-  \item every random member generated in Section~\ref{sec:properties}.
+  \item every random member generated in Section~\ref{sec:properties};
+  \item $\Gamma_J$, both in the original coordinates and as built from Table~\ref{tab:jordan};
+  \item $\Gamma_2$.
   \end{itemize}
 \item \textbf{Spectrum:} the $3\times3$ blocks $D_\beta$ were also computed directly.
 \item \textbf{Lemmas:} Lemmas~\ref{lem:gauss} and~\ref{lem:parity} and all $48$ norm seeds were checked by enumeration.
 \item \textbf{Partial difference set:} verified directly from its file by computing all $312^2$ products $de^{-1}$.
-\item \textbf{Groups:} $|\Aut\Gamma|$ was computed with bliss through python-igraph for all graphs of Table~\ref{tab:witnesses}; $G$ was identified with GAP, which also computed $\Aut\Gamma$ and its subgroup classes for the original Cayley graph.
+\item \textbf{Groups:} $|\Aut\Gamma|$ was computed with bliss through python-igraph for all graphs of Table~\ref{tab:witnesses}; $G$ was identified with GAP, which also computed $\Aut\Gamma$ and its subgroup classes for the original Cayley graph. For $\Gamma_J$, bliss computed $|\Aut\Gamma_J|$, GAP identified $G_J$ and its centre, and the partial difference set counts were checked directly.
 \item \textbf{Remark~\ref{rem:allseeds}:} by exhaustive enumeration.
 \item \textbf{Proposition~\ref{prop:allseeds}:} the two integer programs were solved with CP-SAT (OR-Tools 9.15) using four threads, in about $5$ and $40$ minutes. The solver does not output a certificate of infeasibility, so this step rests on the correctness of the solver.
+\item \textbf{Section~\ref{sec:jordan}:} Proposition~\ref{prop:jordanseeds} was obtained in the same way (12 rounds and a final infeasible program, about $46$ minutes in total). For Proposition~\ref{prop:jordan}(1) and Proposition~\ref{prop:notform}, the order and fixed points of $M$, the twelve subspaces, the $4$-dimensional subspaces in each $C_i\cup\{0\}$ and the types of their four-sets were computed directly. For Proposition~\ref{prop:dim2}, the random search took about $6\cdot10^6$ samples ($90$ seconds), and the graph, its automorphism group, its group and the subspace counts were checked as for $\Gamma_J$; the counts for the sets $C'$ come from the same enumeration.
 \end{itemize}
 
 \subsection*{Use of AI}
-An AI assistant was used for the search and verification programs and a first draft of the text. Specifically, the first constructions were proposed by GPT-6.2 Astra and further audited by Claude Opus 5.5 which the author worked with to draft the first version of the manuscript.
+AI assistants were used for the search and verification programs and a first draft of the text. Specifically, the first constructions were proposed by GPT-6.2 Astra and further audited by Claude Opus 5.5, which the author worked with to draft the first version of the manuscript. The graph $\Gamma_J$ of Section~\ref{sec:jordan} was found by GPT-6.2 Astra after auditing the existing constructions; the graph $\Gamma_2$ was found by Claude Opus 5.5 in the search suggested by Proposition~\ref{prop:groups}. The author has verified and finalized all results and text independently.
 \bibliographystyle{plainnat}
 \bibliography{refs}
 

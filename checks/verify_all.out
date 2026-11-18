@@ -22,4 +22,6 @@
 ../graphs/srg768_312_136_120_family_sample20.g6 [graph 17]: srg(768, 312, 136, 120) verified on all 294528 pairs
 ../graphs/srg768_312_136_120_family_sample20.g6 [graph 18]: srg(768, 312, 136, 120) verified on all 294528 pairs
 ../graphs/srg768_312_136_120_family_sample20.g6 [graph 19]: srg(768, 312, 136, 120) verified on all 294528 pairs
+../graphs/srg768_312_136_120_jordan_cayley.g6 [graph 0]: srg(768, 312, 136, 120) verified on all 294528 pairs
+../graphs/srg768_312_136_120_dim2_cayley.g6 [graph 0]: srg(768, 312, 136, 120) verified on all 294528 pairs
 ../graphs/srg768_455_262_280_threeorbit_complement.g6 [graph 0]: srg(768, 455, 262, 280) verified on all 294528 pairs

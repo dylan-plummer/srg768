@@ -1,0 +1,7 @@
+trials 6110218 time 90.5 type jordan
+seed found; Hz values [-6, 10]
+graph: srg(768,312,136,120) on all pairs
+tau automorphism: True ; R fixed points: 4
+|Aut| = 768, orbits [768], four-cliques at (i,0) [443812, 443812, 443812], hash 75340d9d894097e4
+PDS counts ok: True ; left multiplications are automorphisms: True
+wrote checks/logs/dim2.g
