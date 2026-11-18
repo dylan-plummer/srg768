@@ -1,0 +1,13 @@
+rebuilt three-orbit graph (srg768.shear_graph): |Aut| = 1280, orbit sizes [256, 256, 256], four-cliques through vertex (i,0) for i=0,1,2: [444230, 443250, 443760], total four-cliques 85199360, canonical hash 9053974ff12845fb
+rebuilt Cayley graph (srg768.cayley_graph): |Aut| = 3840, orbit sizes [768], four-cliques through vertex (i,0) for i=0,1,2: [445040, 445040, 445040], total four-cliques 85447680, canonical hash 90b3768cd887f791
+rebuilt norm Cayley graph (srg768.norm_cayley_seeds): |Aut| = 3840, orbit sizes [768], four-cliques through vertex (i,0) for i=0,1,2: [445040, 445040, 445040], total four-cliques 85447680, canonical hash bcfa4d147826a3da
+rebuilt norm three-orbit graph (srg768.norm_threeorbit): |Aut| = 1280, orbit sizes [256, 256, 256], four-cliques through vertex (i,0) for i=0,1,2: [445040, 445040, 445040], total four-cliques 85447680, canonical hash 598a39b68a73a969
+graphs/srg768_312_136_120_threeorbit.g6: |Aut| = 1280, orbit sizes [256, 256, 256], four-cliques through vertex (i,0) for i=0,1,2: [444230, 443250, 443760], total four-cliques 85199360, canonical hash 9053974ff12845fb
+graphs/srg768_312_136_120_cayley.g6: |Aut| = 3840, orbit sizes [768], four-cliques through vertex (i,0) for i=0,1,2: [445040, 445040, 445040], total four-cliques 85447680, canonical hash 90b3768cd887f791
+graphs/srg768_312_136_120_norm_threeorbit.g6: |Aut| = 1280, orbit sizes [256, 256, 256], four-cliques through vertex (i,0) for i=0,1,2: [445040, 445040, 445040], total four-cliques 85447680, canonical hash 598a39b68a73a969
+graphs/srg768_312_136_120_norm_cayley.g6: |Aut| = 3840, orbit sizes [768], four-cliques through vertex (i,0) for i=0,1,2: [445040, 445040, 445040], total four-cliques 85447680, canonical hash bcfa4d147826a3da
+isomorphism classes by canonical hash:
+   598a39b68a73a969 ['rebuilt norm shear', 'graphs/srg768_312_136_120_norm_threeorbit.g6']
+   9053974ff12845fb ['rebuilt shear', 'graphs/srg768_312_136_120_threeorbit.g6']
+   90b3768cd887f791 ['rebuilt cayley', 'graphs/srg768_312_136_120_cayley.g6']
+   bcfa4d147826a3da ['rebuilt norm cayley', 'graphs/srg768_312_136_120_norm_cayley.g6']

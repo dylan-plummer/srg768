@@ -1,0 +1,11 @@
+|G| = 768  IsAbelian false
+IdGroup(G) = 
+[ 768, 1085323 
+ ]  StructureDescription C2 x C2 x C2 x C2 x ((C2 x C2 x C2 x C2) : C3)
+|Aut| = 3840  solvable true  G <= Aut true
+Aut structure (C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2) : C15
+vertex stabiliser C5
+Hall {2,3}-subgroup order 768 regular true Id [ 768, 1085323 ]
+classes of subgroups of order 768: 1 regular: [ true ] ids [ [ 768, 1085323 ] 
+ ]
+EXIT 0

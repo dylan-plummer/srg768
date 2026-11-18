@@ -1,0 +1,17 @@
+four-sets of slopes by cross-ratio class (PGammaL(2,16) orbit invariant):
+  class (2, 3, 8, 9, 14, 15): 2040 four-sets, 0 seeds in total
+  class (6, 7): 340 four-sets, 4080 seeds in total
+distribution (class, seeds per four-set) -> number of four-sets: {((2, 3, 8, 9, 14, 15), 0): 2040, ((6, 7), 12): 340}
+base slopes (0, 1, 2, 10): 12 seeds; sign[m][coset j], coset j = log_t(a) mod 3:
+    m=0: + + - | m=1: + - - | m=2: - + + | m=10: + + -
+    m=0: + + - | m=1: - + + | m=2: + - - | m=10: + + -
+    m=0: + + - | m=1: - + + | m=2: - + + | m=10: - - +
+    m=0: + - + | m=1: + + - | m=2: + + - | m=10: - + -
+    m=0: + - + | m=1: + + - | m=2: - - + | m=10: + - +
+    m=0: + - + | m=1: - - + | m=2: + + - | m=10: + - +
+    m=0: + - - | m=1: + - + | m=2: + - + | m=10: - + +
+    m=0: - + + | m=1: + - + | m=2: + - + | m=10: + - -
+    m=0: - + + | m=1: + - + | m=2: - + - | m=10: - + +
+    m=0: - + + | m=1: - + - | m=2: + - + | m=10: - + +
+    m=0: - + - | m=1: + + - | m=2: + + - | m=10: + - +
+    m=0: - - + | m=1: - + + | m=2: - + + | m=10: + + -

@@ -1,0 +1,3 @@
+../graphs/pds768_norm_cayley.txt: (768,312,136,120) partial difference set in V x| C_3 verified; G abelian: False
+pds768_norm_cayley group: |G| = 768 IdGroup 
+[ 768, 1085323 ] C2 x C2 x C2 x C2 x ((C2 x C2 x C2 x C2) : C3)

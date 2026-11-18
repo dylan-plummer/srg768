@@ -1,0 +1,63 @@
+\begin{thebibliography}{9}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Brady(2025)]{Brady2025}
+Andrew~C. Brady.
+\newblock New strongly regular graphs found via local search for partial
+  difference sets.
+\newblock \emph{Electron. J. Combin.}, 32:\penalty0 P1.24, 2025.
+\newblock arXiv:2406.09550.
+
+\bibitem[Brouwer(2026)]{BrouwerTable}
+Andries~E. Brouwer.
+\newblock Parameters of strongly regular graphs.
+\newblock \url{https://aeb.win.tue.nl/graphs/srg/srgtab.html}, 2026.
+\newblock Accessed 18 November 2026.
+
+\bibitem[Brouwer and Van~Maldeghem(2022)]{BvM2022}
+Andries~E. Brouwer and Hendrik Van~Maldeghem.
+\newblock \emph{Strongly Regular Graphs}, volume 182 of \emph{Encyclopedia of
+  Mathematics and its Applications}.
+\newblock Cambridge University Press, 2022.
+
+\bibitem[Davis et~al.(2023)Davis, Polhill, Smith, and Swartz]{DPSS2023}
+James~A. Davis, John Polhill, Ken Smith, and Eric Swartz.
+\newblock Nonabelian partial difference sets constructed using abelian
+  techniques.
+\newblock arXiv:2307.15648, 2023.
+
+\bibitem[De~Winter and Wang(2017)]{DeWinterWang}
+Stefaan De~Winter and Zeying Wang.
+\newblock Non-existence of partial difference sets of order $8p^3$ in {A}belian
+  groups.
+\newblock arXiv:1707.08662, 2017.
+
+\bibitem[Ma(1994)]{Ma1994}
+S.~L. Ma.
+\newblock A survey of partial difference sets.
+\newblock \emph{Des. Codes Cryptogr.}, 4:\penalty0 221--261, 1994.
+
+\bibitem[Nelson and Swartz(2025)]{NelsonSwartz}
+Seth~R. Nelson and Eric Swartz.
+\newblock Character theoretic techniques for nonabelian partial difference
+  sets.
+\newblock arXiv:2507.23039, 2025.
+
+\bibitem[Polhill et~al.(2024)Polhill, Davis, Smith, and Swartz]{PDSS2024}
+John Polhill, James~A. Davis, Ken~W. Smith, and Eric Swartz.
+\newblock Genuinely nonabelian partial difference sets.
+\newblock \emph{J. Combin. Des.}, 32\penalty0 (7):\penalty0 351--370, 2024.
+\newblock \doi{10.1002/jcd.21938}.
+
+\bibitem[Swartz and Tauscheck(2021)]{SwartzTauscheck}
+Eric Swartz and Gabrielle Tauscheck.
+\newblock Restrictions on parameters of partial difference sets in nonabelian
+  groups.
+\newblock \emph{J. Combin. Des.}, 2021.
+\newblock \doi{10.1002/jcd.21754}.
+
+\end{thebibliography}
