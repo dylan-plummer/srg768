@@ -13,9 +13,9 @@ python jordan768.py [--gap out.g]
    Construction 4.1 with these three seeds (and the general proof: the twelve support subspaces meet pairwise in 0)
    is built here, verified on all pairs, and compared with graphs/srg768_312_136_120_jordan_cayley.g6.
 3. Cayley structure: tau (i,x) -> (i+1, R x), R = M^-T, is an automorphism; D = N(0,0) is a PDS in
-   G = V x| <R>, group law (i,x)(j,y) = (i+j, x + R^i y). Optional GAP script for IdGroup and the centre.
+   G = V x| <R>, group law (i,x)(j,y) = (i+j, x + R^i y). Optional GAP script for IdGroup and the center.
 4. |Aut| and orbits (bliss). Proposition 9.4 (not isomorphic to any graph of Construction 4.1): an isomorphism would
-   be F_2-linear on fibres and map a fibre connection set C onto a set C' of Construction 4.1, so the number of
+   be F_2-linear on fibers and map a fiber connection set C onto a set C' of Construction 4.1, so the number of
    4-dimensional subspaces in C + 0 and the types of their four-sets must agree. We compute them for each C_i of the
    Jordan graph (8 subspaces, 21 four-sets of type (c)); the paper's argument then needs nothing about C'. As a
    cross-check we also compute them for every C' of Construction 4.1 up to GammaL(2,16) (one subline four-set
@@ -258,7 +258,7 @@ def main():
     print(f'|Aut| = {order}, orbits {orbits}, four-cliques through (i,0): '
           f'{[four_cliques_at(A, 256 * i) for i in range(3)]}, canonical hash {canonical_hash(G)}', flush=True)
 
-    # GL(8,2)-invariant of fibre connection sets.
+    # GL(8,2)-invariant of fiber connection sets.
     for i in range(3):
         n, types = jordan_invariant(Cs[i])
         print(f'Jordan graph, fibre {i}: {n} four-dim subspaces in C_i + 0; four-sets meeting pairwise in 0 by operator type (the same for all 24 orders) {dict(types)}', flush=True)

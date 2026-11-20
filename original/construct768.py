@@ -125,7 +125,7 @@ def verify_cayley(rows):
 
 
 def local_four_cliques(rows, vertex):
-    """Count triangles in the neighbourhood, each in increasing vertex order."""
+    """Count triangles in the neighborhood, each in increasing vertex order."""
     candidates = rows[vertex]
     count = 0
     while candidates:
@@ -148,7 +148,7 @@ def main():
         rows = construct(kind)
         check(rows, PARAMETERS)
         signature = [local_four_cliques(rows, 256*i) for i in range(3)]
-        print(kind, 'four-cliques through a representative of each fibre', signature)
+        print(kind, 'four-cliques through a representative of each fiber', signature)
         if kind == 'cayley':
             print('Cayley connection set verified, size', verify_cayley(rows))
         name = 'srg768_312_136_120' + ('_cayley' if kind=='cayley' else '')

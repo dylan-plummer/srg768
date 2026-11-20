@@ -22,7 +22,7 @@ Spectrum: 312^1, 24^182, (−8)^585.
     conjugacy class, all regular. So the graph is a Cayley graph only of G.
   - Three-orbit graph: |Aut| = 1280, with three orbits of size 256.
   - Random members: typically |Aut| = 256 (the translations).
-- **Template, and why prime fields fail.** The same proof applies formally to n fibres F_q^2 on K_n. The parameter
+- **Template, and why prime fields fail.** The same proof applies formally to n fibers F_q^2 on K_n. The parameter
   arithmetic then allows five further open sets with v ≤ 1300: (363,192,106,96), (507,176,70,56),
   (1083,560,298,280), (196,120,74,72) and (676,459,314,306). All have prime q, and Proposition 8.1 of the paper shows
   that over F_p^2 the cross sets must be cosets of lines or their complements, so the template cannot produce any of
@@ -37,7 +37,7 @@ minimal polynomial (X² + X + 1)², which lies in no Desarguesian spread. On the
 characters (3072 in all). One of them, transported by a fixed-point-free M of order 3, gives the graph Γ_J
 (`graphs/srg768_312_136_120_jordan_cayley.g6`). Its automorphism group is the Frobenius group V ⋊ C3 acting
 regularly, so it is a Cayley graph of that group only. It is not isomorphic to any graph of the first construction:
-an isomorphism would be linear on fibres, but in Γ_J each fibre connection set contains exactly eight 4-dimensional
+an isomorphism would be linear on fibers, but in Γ_J each fiber connection set contains exactly eight 4-dimensional
 subspaces, some four of them of the third type.
 
 A regular group of automorphisms containing the translations is V ⋊ ⟨ρ⟩ with ρ of order 3, and the support subspaces
@@ -62,10 +62,10 @@ Notation: F = F_16 ⊃ K = F_4, N(a) = a^5 is the norm F → K, and V = F^2 is p
    - **All seeds.** Every seed is z·χ_c for a C5-invariant seed z and a character χ_c, so there are
      340 × 3072 = 1,044,480 seeds, and the sets B form a single AGL(2,16)-orbit (Proposition 3.8; CP-SAT
      infeasibility, `code/newseeds.py`).
-2. **Graph.** Take three fibres V and three seeds z_i with pairwise disjoint support lines S_i.
-   - Fibre i is joined internally by the punctured annihilators of the eight lines S_{i−1} ∪ S_i.
+2. **Graph.** Take three fibers V and three seeds z_i with pairwise disjoint support lines S_i.
+   - Fiber i is joined internally by the punctured annihilators of the eight lines S_{i−1} ∪ S_i.
    - (i, x) ~ (i+1, y) iff x + y ∈ B_i.
-3. **Proof.** On the three characters χ_β, one per fibre, A acts by a 3×3 matrix:
+3. **Proof.** On the three characters χ_β, one per fiber, A acts by a 3×3 matrix:
    - β = 0: diagonal 120, off-diagonal 96;
    - β on a support line: a 2×2 block [[8, ±16], [±16, 8]] plus a (−8);
    - every other β: −8·I.
@@ -79,10 +79,10 @@ Notation: F = F_16 ⊃ K = F_4, N(a) = a^5 is the norm F → K, and V = F^2 is p
 | `graphs/` | graph6 files, all verified on every pair by `verify_all.sh`; the partial difference set as a text file |
 | `code/srg768.py` | the construction: F_16, Walsh transform, seeds (original and norm), assembly, 3×3 spectral certificate, proof lemmas checked by enumeration |
 | `code/verify_srg.py` | independent numpy verifier (A² identity on all pairs); reads multi-graph graph6 files |
-| `code/invariants768.py` | \|Aut\| and orbits (bliss), four-cliques per fibre, canonical hashes; isomorphism with the original files |
+| `code/invariants768.py` | \|Aut\| and orbits (bliss), four-cliques per fiber, canonical hashes; isomorphism with the original files |
 | `code/seed_search.py` | exhaustive search for C5-invariant seeds; `gl` argument: GL(2,16)-orbit check |
 | `code/newseeds.py` | classification of all seeds: CP-SAT with the known seeds excluded, one four-set per orbit (needs OR-Tools) |
-| `code/jordan768.py` | Γ_J from its certificate `data/jordan_seed.json`: support type, all-pairs check, Cayley structure and PDS, \|Aut\|, fibre invariant of Proposition 9.4; `--gap` writes the IdGroup script |
+| `code/jordan768.py` | Γ_J from its certificate `data/jordan_seed.json`: support type, all-pairs check, Cayley structure and PDS, \|Aut\|, fiber invariant of Proposition 9.4; `--gap` writes the IdGroup script |
 | `code/jordan_normal.py` | moves the certificate to the normal form X, Y, Δ, J of Table 3 (`data/jordan_normal.json`) and checks isomorphism |
 | `code/dim2_search.py` | Γ_2: the search with a fixed space of dimension 2, all checks, GAP script; `rebuild` writes the graph file from `data/dim2_seed.json` |
 | `code/jordan_seeds.py` | all seeds on a type-(c) four-set (iterated CP-SAT); `normal` argument for the normal form |
@@ -100,7 +100,7 @@ Notation: F = F_16 ⊃ K = F_4, N(a) = a^5 is the norm F → K, and V = F^2 is p
 | file | graph |
 |---|---|
 | `srg768_312_136_120_cayley.g6` | first Cayley graph (original coordinates); \|Aut\| = 3840; 445,040 four-cliques per vertex |
-| `srg768_312_136_120_threeorbit.g6` | first three-orbit graph (original coordinates); \|Aut\| = 1280; four-cliques per vertex 444,230 / 443,250 / 443,760 by fibre |
+| `srg768_312_136_120_threeorbit.g6` | first three-orbit graph (original coordinates); \|Aut\| = 1280; four-cliques per vertex 444,230 / 443,250 / 443,760 by fiber |
 | `srg768_455_262_280_threeorbit_complement.g6` | its complement |
 | `srg768_312_136_120_norm_cayley.g6` | Cayley graph in norm coordinates (c = t, μ0 = 0, ν = 1); \|Aut\| = 3840; not isomorphic to the first Cayley graph |
 | `srg768_312_136_120_norm_threeorbit.g6` | shear graph in norm coordinates (cosets 0, t, t^3 of K); \|Aut\| = 1280 |

@@ -15,10 +15,10 @@ A *seed* is a function z: V -> {0, +1, -1} supported on four punctured spread li
   H z in {10, -6} pointwise.
 Then b = (H z + 6)/16 is the indicator of a set B of size 96 with H 1_B = 16 z + 96 delta_0.
 
-Assembly (three fibres i in Z/3, vertex (i, x)):
+Assembly (three fibers i in Z/3, vertex (i, x)):
   * edge {i, i+1} carries a seed z_i with support S_i; the supports are pairwise disjoint;
   * (i, x) ~ (i+1, y) iff x + y in B_i;
-  * inside fibre i: T_i = S_{i-1} u S_i (eight punctured lines) and (i, x) ~ (i, y) iff x + y lies in
+  * inside fiber i: T_i = S_{i-1} u S_i (eight punctured lines) and (i, x) ~ (i, y) iff x + y lies in
     one of the eight punctured lines L^perp, L in T_i.
 """
 import itertools
@@ -100,7 +100,7 @@ SEED_SLOPES = (0, 1, 2, 10)          # 2 = t, 10 = t^3 + t
 
 
 def orbit_signing_to_z(slopes, negative):
-    """The parametrisation of the original notes: on each line (a, m a), order the three C_5-orbits
+    """The parametrization of the original notes: on each line (a, m a), order the three C_5-orbits
     by the smallest integer encoding the first coordinate, number the 12 orbits 0..11 in slope order,
     and put z = -1 on the orbits in `negative`."""
     z = np.zeros(N, dtype=np.int64)
@@ -217,7 +217,7 @@ def vertex_map():
 
 
 def spectral_certificate(seeds):
-    """Exact block-diagonalisation: eigenvalues of A restricted to each character beta (3 x 3 block)."""
+    """Exact block-diagonalization: eigenvalues of A restricted to each character beta (3 x 3 block)."""
     supports = [support_slopes(z) for z in seeds]
     slope_of = {}
     for m in list(range(16)) + [INF]:

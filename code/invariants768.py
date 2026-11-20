@@ -49,7 +49,7 @@ def automorphisms(G):
 
 
 def four_cliques_at(A, v):
-    """Triangles in the neighbourhood of v = four-cliques containing v."""
+    """Triangles in the neighborhood of v = four-cliques containing v."""
     nb = np.flatnonzero(A[v])
     S = A[np.ix_(nb, nb)].astype(np.int64)
     return int(np.trace(S @ S @ S)) // 6

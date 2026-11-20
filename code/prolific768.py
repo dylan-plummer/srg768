@@ -51,7 +51,7 @@ def main():
     seeds = all_seeds()
     fours = sorted(seeds)
     assert len(fours) == 340 and all(len(v) == 12 for v in seeds.values())
-    # self-test: canonical hash invariant under relabelling
+    # self-test: canonical hash invariant under relabeling
     A = srg768.cayley_graph()
     p = np.random.default_rng(1).permutation(len(A))
     assert canonical_hash(to_igraph(A)) == canonical_hash(to_igraph(A[np.ix_(p, p)]))

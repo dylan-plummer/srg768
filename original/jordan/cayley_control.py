@@ -1,4 +1,4 @@
-"""Construct a three-fibre Cayley control with a fixed-point-free order-three action."""
+"""Construct a three-fiber Cayley control with a fixed-point-free order-three action."""
 import argparse
 from collections import Counter
 from itertools import combinations,product

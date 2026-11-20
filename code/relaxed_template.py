@@ -1,6 +1,6 @@
-"""Relaxed template on K_n: fibres an abelian group of order N (here elementary abelian p^m, m>=2), within-fibre
+"""Relaxed template on K_n: fibers an abelian group of order N (here elementary abelian p^m, m>=2), within-fiber
 connection set C_i with Fourier values a0 (at 0), a1 on T_i (|T_i| = (n-1)s), a2 elsewhere; cross sets B_e with
-|B^| = c on S_e (|S_e| = s), 0 elsewhere (beta != 0); supports of edges at a fibre disjoint, T_i = union of them.
+|B^| = c on S_e (|S_e| = s), 0 elsewhere (beta != 0); supports of edges at a fiber disjoint, T_i = union of them.
 Then eigenvalues a1 +- c on supports and a2 elsewhere: c = (t1-t2)/2, a1 = (t1+t2)/2, a2 = t2.
 Solve trace/Parseval for (s, a0, kappa) for every open row of the local table."""
 import csv, math

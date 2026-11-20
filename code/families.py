@@ -1,11 +1,11 @@
 """Parameter analysis: which (n, q, r) can the construction support?
 
-Generalisation: n fibres, each a copy of F_q^2, joined along all pairs (fibre graph K_n). Edge e carries a seed
+Generalization: n fibers, each a copy of F_q^2, joined along all pairs (fiber graph K_n). Edge e carries a seed
 z_e: supported on r punctured spread lines with |z_e| = 1 there, and a set B_e with H 1_{B_e} = q z_e + k delta_0.
-Edges at a common fibre have disjoint supports; fibre i uses the annihilators of the (n-1) r lines of its edges.
+Edges at a common fiber have disjoint supports; fiber i uses the annihilators of the (n-1) r lines of its edges.
 
 Block on a character beta in S_e:   [[q - (n-1) r, q z], [q conj z, q - (n-1) r]]  -> 2q - (n-1) r, -(n-1) r
-Character in no support at fibre i: -(n-1) r.
+Character in no support at fiber i: -(n-1) r.
 Constant characters: (n-1) r (q-1) I + k (J - I): nonprincipal eigenvalue (n-1) r (q-1) - k.
 Parseval for B_e: k^2 - q^2 k + r (q-1) q^2 = 0.
 
